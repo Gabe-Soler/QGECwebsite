@@ -87,7 +87,7 @@
             <img
               id="about-image"
               class="about-image"
-              src="about-placeholder.svg"
+              src="assets/placeholders/about-placeholder.svg"
               alt="Conference audience placeholder"
               loading="lazy"
             />
@@ -116,32 +116,7 @@
         </div>
       </section>
 
-      <section id="team" class="section section-light observe">
-        <div class="container team-tree">
-          <p class="eyebrow">Organizing Committee</p>
-          <h2 class="section-title">The Team Behind QGEC</h2>
-
-          <div class="team-tree-level team-level-cochairs">
-            <h3 class="team-subtitle">Co-Chairs</h3>
-            <div id="cochairs-grid" class="cochairs-grid team-tree-grid"></div>
-          </div>
-
-          <div class="team-tree-level team-level-directors">
-            <h3 class="team-subtitle">Directors and Coordinators</h3>
-            <div id="directors-grid" class="directors-grid team-tree-grid"></div>
-          </div>
-        </div>
-      </section>
-
-      <section id="agenda" class="section section-light observe">
-        <div class="container">
-          <p class="eyebrow">Agenda</p>
-          <h2 class="section-title">One-Day Program (9:00 AM - 5:00 PM)</h2>
-          <ul id="agenda-list" class="agenda-list" aria-live="polite"></ul>
-        </div>
-      </section>
-
-      <section id="sponsors" class="section section-dark observe">
+      <section id="sponsors" class="section section-light-plain observe">
         <div class="container sponsors-tree">
           <p class="eyebrow">Sponsors</p>
           <h2 class="section-title">Partner Organizations</h2>
@@ -174,7 +149,15 @@
         </div>
       </section>
 
-      <section id="venue" class="section section-light observe">
+      <section id="agenda" class="section section-light observe">
+        <div class="container">
+          <p class="eyebrow">Agenda</p>
+          <h2 class="section-title">One-Day Program (9:00 AM - 5:00 PM)</h2>
+          <ul id="agenda-list" class="agenda-list" aria-live="polite"></ul>
+        </div>
+      </section>
+
+      <section id="venue" class="section section-light-plain observe">
         <div class="container venue-layout">
           <div class="venue-copy">
             <p class="eyebrow">Venue and Travel</p>
@@ -183,6 +166,23 @@
             <p id="venue-notes"></p>
           </div>
           <div id="venue-map" class="venue-map" aria-label="Venue map section"></div>
+        </div>
+      </section>
+
+      <section id="team" class="section section-light-soft observe">
+        <div class="container team-tree">
+          <p class="eyebrow">Organizing Committee</p>
+          <h2 class="section-title">The Team Behind QGEC</h2>
+
+          <div class="team-tree-level team-level-cochairs">
+            <h3 class="team-subtitle">Co-Chairs</h3>
+            <div id="cochairs-grid" class="cochairs-grid team-tree-grid"></div>
+          </div>
+
+          <div class="team-tree-level team-level-directors">
+            <h3 class="team-subtitle">Directors and Coordinators</h3>
+            <div id="directors-grid" class="directors-grid team-tree-grid"></div>
+          </div>
         </div>
       </section>
 
