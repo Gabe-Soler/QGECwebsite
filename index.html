@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Queen's Global Energy Conference website with conference details, speakers, agenda, and registration information."
+    />
+    <title>Queen's Global Energy Conference</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Queen's Global Energy Conference home">
+          <span class="brand-mark">QGEC</span>
+          <span class="brand-subtitle">Queen's Global Energy Conference</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#speakers">Speakers</a>
+          <a href="#team">Team</a>
+          <a href="#agenda">Agenda</a>
+          <a href="#sponsors">Sponsors</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+          <a id="header-register-link" class="button button-solid register-inline" href="#">Register</a>
+        </nav>
+
+        <a id="header-register-cta" class="button button-solid register-desktop" href="#">Register</a>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="home" class="hero observe">
+        <div class="hero-media" id="hero-media" aria-hidden="true"></div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="container hero-content">
+          <p class="eyebrow">Queen's University</p>
+          <h1 id="hero-title">Queen's Global Energy Conference</h1>
+          <p id="hero-tagline" class="hero-tagline">A premier student-led gathering for the future of global energy.</p>
+          <p id="hero-description" class="hero-description">
+            Engage with leaders, policy makers, and innovators shaping the energy transition.
+          </p>
+          <div class="hero-actions">
+            <a id="hero-register-link" class="button button-solid" href="#">Register Now</a>
+            <a id="hero-sponsor-link" class="button button-outline" href="#">Become a Sponsor</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="snapshot" class="section section-light observe">
+        <div class="container">
+          <p class="eyebrow">Conference Snapshot</p>
+          <h2 class="section-title">Key Numbers</h2>
+          <div id="stats-grid" class="stats-grid"></div>
+        </div>
+      </section>
+
+      <section id="about" class="section section-dark observe">
+        <div class="container about-layout">
+          <div class="about-image-wrap">
+            <img
+              id="about-image"
+              class="about-image"
+              src="assets/placeholders/about-placeholder.svg"
+              alt="Conference audience placeholder"
+              loading="lazy"
+            />
+          </div>
+          <div class="about-copy">
+            <p class="eyebrow">About QGEC</p>
+            <h2 class="section-title">Where Energy, Policy, and Innovation Converge</h2>
+            <p id="about-description"></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="themes" class="section section-light observe">
+        <div class="container">
+          <p class="eyebrow">Conference Themes</p>
+          <h2 class="section-title">Core Tracks</h2>
+          <div id="themes-grid" class="themes-grid"></div>
+        </div>
+      </section>
+
+      <section id="speakers" class="section section-dark observe">
+        <div class="container">
+          <p class="eyebrow">Featured Speakers</p>
+          <h2 class="section-title">Leaders and Practitioners</h2>
+          <div id="speakers-grid" class="speakers-grid"></div>
+        </div>
+      </section>
+
+      <section id="team" class="section section-light observe">
+        <div class="container team-tree">
+          <p class="eyebrow">Organizing Committee</p>
+          <h2 class="section-title">The Team Behind QGEC</h2>
+
+          <div class="team-tree-level team-level-cochairs">
+            <h3 class="team-subtitle">Co-Chairs</h3>
+            <div id="cochairs-grid" class="cochairs-grid team-tree-grid"></div>
+          </div>
+
+          <div class="team-tree-level team-level-directors">
+            <h3 class="team-subtitle">Directors and Coordinators</h3>
+            <div id="directors-grid" class="directors-grid team-tree-grid"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="agenda" class="section section-light observe">
+        <div class="container">
+          <p class="eyebrow">Agenda</p>
+          <h2 class="section-title">One-Day Program (9:00 AM - 5:00 PM)</h2>
+          <ul id="agenda-list" class="agenda-list" aria-live="polite"></ul>
+        </div>
+      </section>
+
+      <section id="sponsors" class="section section-dark observe">
+        <div class="container sponsors-tree">
+          <p class="eyebrow">Sponsors</p>
+          <h2 class="section-title">Partner Organizations</h2>
+
+          <div class="sponsor-tree-level sponsor-level-title">
+            <h3>Title Sponsors</h3>
+            <div id="sponsors-title" class="sponsor-grid sponsor-tree-grid"></div>
+          </div>
+
+          <div class="sponsor-tree-level sponsor-level-gold">
+            <h3>Gold Sponsors</h3>
+            <div id="sponsors-gold" class="sponsor-grid sponsor-tree-grid"></div>
+          </div>
+
+          <div class="sponsor-tree-level sponsor-level-community">
+            <h3>Community Sponsors</h3>
+            <div id="sponsors-community" class="sponsor-grid sponsor-tree-grid"></div>
+          </div>
+
+          <aside class="sponsor-callout" aria-label="Sponsorship call to action">
+            <h3>Sponsor the Next Generation of Energy Leaders</h3>
+            <p>
+              Learn about partnership opportunities and visibility packages for Queen's Global Energy Conference.
+            </p>
+            <div class="sponsor-actions">
+              <a id="prospectus-link" class="button button-solid" href="#">Download Prospectus</a>
+              <a id="sponsor-link" class="button button-outline" href="#">Contact Sponsorship Team</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="venue" class="section section-light observe">
+        <div class="container venue-layout">
+          <div class="venue-copy">
+            <p class="eyebrow">Venue and Travel</p>
+            <h2 class="section-title" id="venue-name">TBD Venue</h2>
+            <p id="venue-address">TBD Address</p>
+            <p id="venue-notes"></p>
+          </div>
+          <div id="venue-map" class="venue-map" aria-label="Venue map section"></div>
+        </div>
+      </section>
+
+      <section id="faq" class="section section-dark observe">
+        <div class="container">
+          <p class="eyebrow">FAQ</p>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <div id="faq-list" class="faq-list"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer observe">
+      <div class="container footer-grid">
+        <div>
+          <p class="eyebrow footer-eyebrow">Contact</p>
+          <h2 class="footer-brand">Queen's Global Energy Conference</h2>
+          <p id="contact-email">Email: TBD</p>
+          <p id="contact-address">Address: TBD</p>
+        </div>
+        <div>
+          <p class="eyebrow footer-eyebrow">Connect</p>
+          <div id="social-links" class="social-links"></div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p id="footer-copyright"></p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
