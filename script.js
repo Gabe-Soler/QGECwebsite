@@ -7,7 +7,7 @@ const siteConfig = {
       "Join students, researchers, executives, and policy leaders for a one-day conference focused on the global energy industry.",
     about:
       "Queen's Global Energy Conference (QGEC) connects emerging talent with decision-makers shaping global energy markets. The conference combines keynote perspectives, technical sessions, and practical networking designed for both learning and sponsorship visibility.",
-    heroImage: "assets/placeholders/hero-energy-outline.svg",
+    heroImage: "hero-energy-outline.svg",
     aboutImage: "western-electricity-grids.jpg"
   },
   ctaLinks: {
@@ -24,32 +24,32 @@ const siteConfig = {
     {
       title: "Energy Markets",
       description: "Trade flows, market volatility, and long-term demand outlooks.",
-      image: "assets/placeholders/theme-placeholder.svg"
+      image: "theme-placeholder.svg"
     },
     {
       title: "Policy and Regulation",
       description: "Frameworks accelerating resilient and affordable energy systems.",
-      image: "assets/placeholders/theme-placeholder.svg"
+      image: "theme-placeholder.svg"
     },
     {
       title: "Infrastructure and Grid",
       description: "Grid modernization, storage, and transmission priorities.",
-      image: "assets/placeholders/theme-placeholder.svg"
+      image: "theme-placeholder.svg"
     },
     {
       title: "Climate and Transition",
       description: "Decarbonization strategy and realistic implementation pathways.",
-      image: "assets/placeholders/theme-placeholder.svg"
+      image: "theme-placeholder.svg"
     },
     {
       title: "Technology and Innovation",
       description: "New technologies from advanced materials to clean fuels.",
-      image: "assets/placeholders/theme-placeholder.svg"
+      image: "theme-placeholder.svg"
     },
     {
       title: "Careers in Energy",
       description: "Mentorship, recruiting, and pathways into energy leadership.",
-      image: "assets/placeholders/theme-placeholder.svg"
+      image: "theme-placeholder.svg"
     }
   ],
   speakers: [
@@ -77,19 +77,19 @@ const siteConfig = {
       {
         name: "Alison Whike",
         role: "Conference Co-Chair",
-        image: "assets/placeholders/speaker-placeholder.svg"
+        image: "speaker-placeholder.svg"
       },
       {
         name: "Matias Marjovsky",
         role: "Conference Co-Chair",
-        image: "assets/placeholders/speaker-placeholder.svg"
+        image: "speaker-placeholder.svg"
       }
     ],
     directors: [
       {
         name: "Avery Phelan",
         role: "Director of Programming",
-        image: "assets/placeholders/speaker-placeholder.svg",
+        image: "speaker-placeholder.svg",
         coordinators: [
           { name: "TBD Coordinator", role: "Programming Coordinator" },
           { name: "TBD Coordinator", role: "Programming Coordinator" }
@@ -98,7 +98,7 @@ const siteConfig = {
       {
         name: "Gabriel Soler",
         role: "Director of Finance",
-        image: "assets/placeholders/speaker-placeholder.svg",
+        image: "speaker-placeholder.svg",
         coordinators: [
           { name: "TBD Coordinator", role: "Finance Coordinator" },
           { name: "TBD Coordinator", role: "Finance Coordinator" }
@@ -107,7 +107,7 @@ const siteConfig = {
       {
         name: "Jamie Greenberg",
         role: "Director of Logistics",
-        image: "assets/placeholders/speaker-placeholder.svg",
+        image: "speaker-placeholder.svg",
         coordinators: [
           { name: "TBD Coordinator", role: "Logistics Coordinator" },
           { name: "TBD Coordinator", role: "Logistics Coordinator" }
@@ -116,7 +116,7 @@ const siteConfig = {
       {
         name: "Markus Pennant",
         role: "Director of Marketing",
-        image: "assets/placeholders/speaker-placeholder.svg",
+        image: "speaker-placeholder.svg",
         coordinators: [
           { name: "TBD Coordinator", role: "Marketing Coordinator" },
           { name: "TBD Coordinator", role: "Marketing Coordinator" }
@@ -125,7 +125,7 @@ const siteConfig = {
       {
         name: "Sarah Becanin",
         role: "Director of Partnerships",
-        image: "assets/placeholders/speaker-placeholder.svg",
+        image: "speaker-placeholder.svg",
         coordinators: [
           { name: "TBD Coordinator", role: "Partnership Coordinator" },
           { name: "TBD Coordinator", role: "Partnership Coordinator" }
@@ -185,16 +185,16 @@ const siteConfig = {
   ],
   sponsors: {
     title: [
-      { name: "Title Sponsor TBD", logo: "assets/placeholders/sponsor-placeholder.svg", url: "https://example.com" }
+      { name: "Title Sponsor TBD", logo: "sponsor-placeholder.svg", url: "https://example.com" }
     ],
     gold: [
-      { name: "Gold Sponsor TBD", logo: "assets/placeholders/sponsor-placeholder.svg", url: "https://example.com" },
-      { name: "Gold Sponsor TBD", logo: "assets/placeholders/sponsor-placeholder.svg", url: "https://example.com" }
+      { name: "Gold Sponsor TBD", logo: "sponsor-placeholder.svg", url: "https://example.com" },
+      { name: "Gold Sponsor TBD", logo: "sponsor-placeholder.svg", url: "https://example.com" }
     ],
     community: [
-      { name: "Community Sponsor TBD", logo: "assets/placeholders/sponsor-placeholder.svg", url: "https://example.com" },
-      { name: "Community Sponsor TBD", logo: "assets/placeholders/sponsor-placeholder.svg", url: "https://example.com" },
-      { name: "Community Sponsor TBD", logo: "assets/placeholders/sponsor-placeholder.svg", url: "https://example.com" }
+      { name: "Community Sponsor TBD", logo: "sponsor-placeholder.svg", url: "https://example.com" },
+      { name: "Community Sponsor TBD", logo: "sponsor-placeholder.svg", url: "https://example.com" },
+      { name: "Community Sponsor TBD", logo: "sponsor-placeholder.svg", url: "https://example.com" }
     ]
   },
   venue: {
@@ -240,23 +240,23 @@ const DEFAULT_PLACEHOLDER = {
   theme: {
     title: "Theme Coming Soon",
     description: "Program details are being finalized.",
-    image: "assets/placeholders/theme-placeholder.svg"
+    image: "theme-placeholder.svg"
   },
   speaker: {
     name: "TBD Speaker",
     title: FALLBACK,
     organization: FALLBACK,
-    image: "assets/placeholders/speaker-placeholder.svg"
+    image: "speaker-placeholder.svg"
   },
   coChair: {
     name: "TBD Co-Chair",
     role: "Conference Co-Chair",
-    image: "assets/placeholders/speaker-placeholder.svg"
+    image: "speaker-placeholder.svg"
   },
   director: {
     name: "TBD Director",
     role: "Director",
-    image: "assets/placeholders/speaker-placeholder.svg",
+    image: "speaker-placeholder.svg",
     coordinators: [
       { name: "TBD Coordinator", role: "Coordinator" },
       { name: "TBD Coordinator", role: "Coordinator" }
@@ -264,7 +264,7 @@ const DEFAULT_PLACEHOLDER = {
   },
   sponsor: {
     name: "TBD Sponsor",
-    logo: "assets/placeholders/sponsor-placeholder.svg",
+    logo: "sponsor-placeholder.svg",
     url: "#"
   },
   agenda: {
@@ -317,7 +317,7 @@ const renderHero = () => {
   byId("hero-title").textContent = `${safeText(conference?.name)} ${safeText(conference?.year, "")}`.trim();
   byId("hero-tagline").textContent = safeText(conference?.tagline);
   byId("hero-description").textContent = safeText(conference?.description);
-  byId("hero-media").style.backgroundImage = `url('${safeUrl(conference?.heroImage, "assets/placeholders/hero-energy-outline.svg")}')`;
+  byId("hero-media").style.backgroundImage = `url('${safeUrl(conference?.heroImage, "hero-energy-outline.svg")}')`;
 
   const register = safeUrl(ctaLinks?.registerUrl);
   const sponsor = safeUrl(ctaLinks?.sponsorUrl);
@@ -353,7 +353,7 @@ const renderAbout = () => {
   byId("about-description").textContent = safeText(conference?.about);
 
   const image = byId("about-image");
-  image.src = safeUrl(conference?.aboutImage, "assets/placeholders/about-placeholder.svg");
+  image.src = safeUrl(conference?.aboutImage, "about-placeholder.svg");
   image.alt = `${safeText(conference?.name)} audience placeholder image`;
 };
 
@@ -366,7 +366,7 @@ const renderThemes = () => {
     const card = document.createElement("article");
     card.className = "theme-card";
     card.innerHTML = `
-      <img src="${safeUrl(theme?.image, "assets/placeholders/theme-placeholder.svg")}" alt="${safeText(theme?.title)} theme image" loading="lazy" />
+      <img src="${safeUrl(theme?.image, "theme-placeholder.svg")}" alt="${safeText(theme?.title)} theme image" loading="lazy" />
       <div class="theme-card-content">
         <h3>${safeText(theme?.title)}</h3>
         <p>${safeText(theme?.description)}</p>
@@ -385,7 +385,7 @@ const renderSpeakers = () => {
     const card = document.createElement("article");
     card.className = "speaker-card";
     card.innerHTML = `
-      <img src="${safeUrl(speaker?.image, "assets/placeholders/speaker-placeholder.svg")}" alt="${safeText(speaker?.name)} headshot" loading="lazy" />
+      <img src="${safeUrl(speaker?.image, "speaker-placeholder.svg")}" alt="${safeText(speaker?.name)} headshot" loading="lazy" />
       <div class="speaker-copy">
         <h3 class="speaker-name">${safeText(speaker?.name)}</h3>
         <p class="speaker-meta">${safeText(speaker?.title)} | ${safeText(speaker?.organization)}</p>
@@ -401,7 +401,7 @@ const normalizedCoordinators = (coordinators) => {
     list.push({
       name: "TBD Coordinator",
       role: "Coordinator",
-      image: "assets/placeholders/speaker-placeholder.svg"
+      image: "speaker-placeholder.svg"
     });
   }
   return list;
@@ -426,7 +426,7 @@ const renderTeam = () => {
     card.innerHTML = `
       <img
         class="team-photo team-photo-cochair"
-        src="${safeUrl(member?.image, "assets/placeholders/speaker-placeholder.svg")}"
+        src="${safeUrl(member?.image, "speaker-placeholder.svg")}"
         alt="${safeText(member?.name)} photo"
         loading="lazy"
       />
@@ -451,7 +451,7 @@ const renderTeam = () => {
           <article class="coordinator-person team-person">
             <img
               class="team-photo team-photo-coordinator"
-              src="${safeUrl(coordinator?.image, "assets/placeholders/speaker-placeholder.svg")}"
+              src="${safeUrl(coordinator?.image, "speaker-placeholder.svg")}"
               alt="${safeText(coordinator?.name)} photo"
               loading="lazy"
             />
@@ -465,7 +465,7 @@ const renderTeam = () => {
     card.innerHTML = `
       <img
         class="team-photo team-photo-director"
-        src="${safeUrl(director?.image, "assets/placeholders/speaker-placeholder.svg")}"
+        src="${safeUrl(director?.image, "speaker-placeholder.svg")}"
         alt="${safeText(director?.name)} photo"
         loading="lazy"
       />
@@ -568,7 +568,7 @@ const renderSponsors = () => {
       setLink(link, sponsor?.url);
       link.setAttribute("aria-label", safeText(sponsor?.name));
       link.innerHTML = `
-        <img src="${safeUrl(sponsor?.logo, "assets/placeholders/sponsor-placeholder.svg")}" alt="${safeText(sponsor?.name)} logo" loading="lazy" />
+        <img src="${safeUrl(sponsor?.logo, "sponsor-placeholder.svg")}" alt="${safeText(sponsor?.name)} logo" loading="lazy" />
       `;
       container.append(link);
     });
@@ -602,7 +602,7 @@ const renderVenue = () => {
   }
 
   const placeholder = document.createElement("img");
-  placeholder.src = safeUrl(venue.placeholderImage, "assets/placeholders/venue-map-placeholder.svg");
+  placeholder.src = safeUrl(venue.placeholderImage, "venue-map-placeholder.svg");
   placeholder.alt = "Venue map placeholder";
   placeholder.loading = "lazy";
   mapContainer.append(placeholder);
