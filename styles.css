@@ -717,6 +717,7 @@ h4 {
 
 .team-photo {
   width: 100%;
+  height: auto;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   object-fit: cover;
@@ -898,23 +899,15 @@ h4 {
   justify-content: center;
   align-items: center;
   gap: clamp(0.7rem, 1.3vw, 1.05rem);
-  width: 100%;
+  width: min(1080px, 100%);
   margin: 0 auto;
-}
-
-.sponsor-marquee-track,
-.sponsor-marquee-segment {
-  display: contents;
-}
-
-.sponsor-marquee-clone {
-  display: none;
 }
 
 .sponsor-banner-item {
   flex: 0 1 auto;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.2rem 0.35rem;
   border: 0;
   border-radius: 0;
@@ -928,40 +921,6 @@ h4 {
   max-width: var(--logo-max-width);
   max-height: var(--logo-max-height);
   object-fit: contain;
-}
-
-.sponsor-banner:hover .sponsor-marquee-track,
-.sponsor-banner:focus-within .sponsor-marquee-track {
-  animation-play-state: paused;
-}
-
-@keyframes sponsor-marquee {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-
-  to {
-    transform: translate3d(-50%, 0, 0);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .sponsor-banner {
-    -webkit-mask-image: none;
-    mask-image: none;
-  }
-
-  .sponsor-marquee-track,
-  .sponsor-marquee-segment {
-    display: contents;
-    width: auto;
-    animation: none !important;
-    will-change: auto;
-  }
-
-  .sponsor-marquee-clone {
-    display: none;
-  }
 }
 
 #sponsors .button-solid {
@@ -1450,34 +1409,7 @@ h4 {
   .sponsor-banner {
     --logo-max-width: clamp(98px, 26vw, 140px);
     --logo-max-height: clamp(34px, 10vw, 50px);
-    display: block;
-    overflow: hidden;
     padding: 0.2rem 0 0.55rem;
-    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
-    mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
-  }
-
-  .sponsor-marquee-track {
-    display: flex;
-    width: max-content;
-    align-items: center;
-    animation: sponsor-marquee 34s linear infinite;
-    will-change: transform;
-  }
-
-  .sponsor-marquee-segment {
-    display: flex;
-    align-items: center;
-    gap: clamp(0.95rem, 3vw, 1.25rem);
-  }
-
-  .sponsor-marquee-clone {
-    display: flex;
-  }
-
-  .sponsor-banner-item {
-    flex: 0 0 auto;
-    padding-inline: 0.08rem;
   }
 
   .directors-grid {

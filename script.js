@@ -73,38 +73,38 @@ const siteConfig = {
       {
         name: "Alison Whike",
         role: "Co-Chair",
-        image: "images/Team/Cochair/Aly-Headshot.jpg"
+        image: "images/Team/Cochair/Aly-Headshot-opt.jpg"
       },
       {
         name: "Matias Marjovsky",
         role: "Co-Chair",
-        image: "images/Team/Cochair/Matias-Headshot.jpg"
+        image: "images/Team/Cochair/Matias-Headshot-opt.jpg"
       }
     ],
     directors: [
       {
         name: "Avery Phelan",
-        role: "Director of x",
-        image: "images/Team/Directors/Avery-Headshot.jpg"
+        role: "Logistics",
+        image: "images/Team/Directors/Avery-Headshot-opt.jpg"
       },
       {
         name: "Gabriel Soler",
-        role: "Director of Finance",
-        image: "images/Team/Directors/Gabe-Headshot.jpg"
+        role: "Finance",
+        image: "images/Team/Directors/Gabe-Headshot-opt.jpg"
       },
       {
         name: "Jamie Greenberg",
-        role: "Director of x",
-        image: "images/Team/Directors/Jamie-Headshot.jpg"
+        role: "Speakers",
+        image: "images/Team/Directors/Jamie-Headshot-opt.jpg"
       },
       {
         name: "Markus Pennant",
-        role: "Director of x",
-        image: "images/Team/Directors/Markus-Headshot.jpg"
+        role: "Sponsorship",
+        image: "images/Team/Directors/Markus-Headshot-opt.jpg"
       },
       {
         name: "Sarah Becanin",
-        role: "Director of x",
+        role: "X",
         image: "images/backroundsvgs/speaker-placeholder.svg"
       },
     ]
@@ -380,6 +380,7 @@ const renderTeam = () => {
         class="team-photo team-photo-cochair"
         src="${safeUrl(member?.image, "images/backroundsvgs/speaker-placeholder.svg")}"
         alt="${safeText(member?.name)} photo"
+        decoding="async"
         loading="lazy"
       />
       <h3 class="team-name">${safeText(member?.name)}</h3>
@@ -399,6 +400,7 @@ const renderTeam = () => {
         class="team-photo team-photo-director"
         src="${safeUrl(director?.image, "images/backroundsvgs/speaker-placeholder.svg")}"
         alt="${safeText(director?.name)} photo"
+        decoding="async"
         loading="lazy"
       />
       <h3 class="team-name">${safeText(director?.name)}</h3>
@@ -478,8 +480,8 @@ const renderSponsors = () => {
     name: `Past Sponsor ${index + 1}`
   }));
 
-  const createSponsorLogoNode = (sponsor, allowLink = true) => {
-    const href = allowLink ? safeUrl(sponsor?.url, "") : "";
+  const createSponsorLogoNode = (sponsor) => {
+    const href = safeUrl(sponsor?.url, "");
     const logoSrc = safeUrl(sponsor?.logo, "images/backroundsvgs/sponsor-placeholder.svg");
     const card = href ? document.createElement("a") : document.createElement("article");
     card.className = "sponsor-banner-item";
@@ -496,24 +498,9 @@ const renderSponsors = () => {
   };
 
   const logoItems = sponsors.length ? sponsors : fallbackSponsors;
-  const track = document.createElement("div");
-  track.className = "sponsor-marquee-track";
-
-  const primarySegment = document.createElement("div");
-  primarySegment.className = "sponsor-marquee-segment";
   logoItems.forEach((sponsor) => {
-    primarySegment.append(createSponsorLogoNode(sponsor));
+    banner.append(createSponsorLogoNode(sponsor));
   });
-
-  const cloneSegment = document.createElement("div");
-  cloneSegment.className = "sponsor-marquee-segment sponsor-marquee-clone";
-  cloneSegment.setAttribute("aria-hidden", "true");
-  logoItems.forEach((sponsor) => {
-    cloneSegment.append(createSponsorLogoNode(sponsor, false));
-  });
-
-  track.append(primarySegment, cloneSegment);
-  banner.append(track);
 
   setLink(byId("prospectus-link"), siteConfig.ctaLinks?.prospectusUrl);
 
