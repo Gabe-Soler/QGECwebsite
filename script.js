@@ -168,7 +168,7 @@ const siteConfig = {
     { name: "TTA", logo: "images/Sponsors/TTA.png" },
     { name: "YCR", logo: "images/Sponsors/YCR.webp" },
     { name: "Bennett Jones", logo: "images/Sponsors/bennettjones.jpg" },
-    { name: "Bullfrog Power", logo: "images/Sponsors/bullfrog.svg" },
+
     { name: "CEEA", logo: "images/Sponsors/ceea.svg" },
     { name: "Hemisphere", logo: "images/Sponsors/hemisphere.png" },
     { name: "McDaniel", logo: "images/Sponsors/mcdaniel.webp" },
