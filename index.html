@@ -8,6 +8,7 @@
       content="Queen's Global Energy Conference website with conference details, speakers, agenda, and registration information."
     />
     <title>Queen's Global Energy Conference</title>
+    <link rel="preload" href="images/backroundsvgs/hero-energy-outline.svg" as="image" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -37,9 +38,9 @@
           <a href="#home">Home</a>
           <a href="#about">About</a>
           <!-- <a href="#speakers">Speakers</a> -->
-          <a href="#team">Team</a>
           <!-- <a href="#agenda">Agenda</a> -->
           <a href="#sponsors">Sponsors</a>
+          <a href="#team">Team</a>
           <a href="#faq">FAQ</a>
           <a href="#contact">Contact</a>
           <a id="header-register-link" class="button button-solid register-inline" href="#">Register</a>
@@ -54,17 +55,21 @@
         <div class="hero-media" id="hero-media" aria-hidden="true"></div>
         <div class="hero-overlay" aria-hidden="true"></div>
         <div class="container hero-content">
-        <!--  <p class="eyebrow">Queen's University</p> -->
+          <p class="hero-kicker">Queen's University</p>
           <h1 id="hero-title">Queen's Global Energy Conference</h1>
           <p id="hero-tagline" class="hero-tagline">A premier student-led gathering for the future of global energy.</p>
           <p id="hero-description" class="hero-description">
             Engage with leaders, policy makers, and innovators shaping the energy transition.
           </p>
+          <div id="hero-meta" class="hero-meta" aria-label="Conference details"></div>
           <div class="hero-actions">
             <a id="hero-register-link" class="button button-solid" href="#">Register Now</a>
             <a id="hero-sponsor-link" class="button button-outline" href="#">Become a Sponsor</a>
           </div>
         </div>
+        <a class="scroll-cue" href="#about" aria-label="Scroll to about section">
+          <span></span>
+        </a>
       </section>
 
       <section id="about" class="section section-dark observe">
@@ -79,9 +84,10 @@
             />
           </div>
           <div class="about-copy">
-           <!-- <p class="eyebrow">About QGEC</p> -->
+            <p class="eyebrow">About QGEC</p>
             <h2 class="section-title">Where Energy, Policy, and Innovation Converge</h2>
             <p id="about-description"></p>
+            <div id="about-highlights" class="about-highlights" aria-label="Conference highlights"></div>
           </div>
         </div>
       </section>
@@ -108,8 +114,13 @@
 
       <section id="sponsors" class="section section-light-plain observe">
         <div class="container sponsors-showcase">
-         <!-- <p class="eyebrow">Sponsors</p> -->
-          <h2 class="section-title">Partner Organizations</h2>
+          <div class="section-heading section-heading-centered">
+            <p class="eyebrow">Sponsors</p>
+            <h2 class="section-title">Partner Organizations</h2>
+            <p class="section-lead">
+              A professional platform for organizations shaping the energy sector and the students preparing to lead it.
+            </p>
+          </div>
           <p class="sponsors-kicker">Past Sponsors</p>
           <div id="past-sponsors-banner" class="sponsor-banner" aria-label="Past sponsor logos"></div>
 
@@ -150,8 +161,10 @@
     -->
       <section id="team" class="section section-light-soft observe">
         <div class="container team-tree">
-         <!-- <p class="eyebrow">Organizing Committee</p> -->
-          <h2 class="section-title">The Team Behind QGEC</h2>
+          <div class="section-heading section-heading-centered">
+            <p class="eyebrow">Organizing Committee</p>
+            <h2 class="section-title">The Team Behind QGEC</h2>
+          </div>
 
           <div class="team-tree-level team-level-cochairs">
             <h3 class="team-subtitle">Co-Chairs</h3>
@@ -167,8 +180,10 @@
 
       <section id="faq" class="section section-dark observe">
         <div class="container">
-         <!-- <p class="eyebrow">FAQ</p> -->
-          <h2 class="section-title">Frequently Asked Questions</h2>
+          <div class="section-heading">
+            <p class="eyebrow">FAQ</p>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+          </div>
           <div id="faq-list" class="faq-list"></div>
         </div>
       </section>

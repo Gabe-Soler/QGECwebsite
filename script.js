@@ -1,3 +1,5 @@
+document.documentElement.classList.add("js");
+
 const siteConfig = {
   conference: {
     name: "Queen's Global Energy Conference",
@@ -8,7 +10,17 @@ const siteConfig = {
     about:
       "Queen's Global Energy Conference (QGEC) connects emerging talent with decision-makers shaping global energy markets. The conference combines keynote perspectives, technical sessions, and practical networking designed for both learning and sponsorship visibility.",
     heroImage: "images/backroundsvgs/hero-energy-outline.svg",
-    aboutImage: "images/western-electricity-grids.jpg"
+    aboutImage: "images/western-electricity-grids.jpg",
+    details: [
+      { label: "Year", value: "2026" },
+      { label: "Format", value: "One-day conference" },
+      { label: "Location", value: "Kingston, Ontario" }
+    ],
+    highlights: [
+      { value: "Student-led", label: "Queen's engineering conference" },
+      { value: "Global energy", label: "Markets, policy, and innovation" },
+      { value: "Industry access", label: "Built for students and partners" }
+    ]
   },
   ctaLinks: {
     registerUrl: "registration.html",
@@ -104,9 +116,9 @@ const siteConfig = {
       },
       {
         name: "Sarah Becanin",
-        role: "X",
+        role: "Director",
         image: "images/backroundsvgs/speaker-placeholder.svg"
-      },
+      }
     ]
   },
   agenda: [
@@ -296,6 +308,20 @@ const renderHero = () => {
   byId("hero-description").textContent = safeText(conference?.description);
   byId("hero-media").style.backgroundImage = `url('${safeUrl(conference?.heroImage, "images/backroundsvgs/hero-energy-outline.svg")}')`;
 
+  const meta = byId("hero-meta");
+  if (meta) {
+    meta.innerHTML = "";
+    asArray(conference?.details).forEach((item) => {
+      const detail = document.createElement("span");
+      detail.className = "hero-meta-item";
+      detail.innerHTML = `
+        <span class="hero-meta-label">${safeText(item?.label, "")}</span>
+        <span class="hero-meta-value">${safeText(item?.value)}</span>
+      `;
+      meta.append(detail);
+    });
+  }
+
   const register = safeUrl(ctaLinks?.registerUrl);
   const sponsor = safeUrl(ctaLinks?.sponsorInfoUrl, safeUrl(ctaLinks?.sponsorUrl));
 
@@ -316,6 +342,20 @@ const renderAbout = () => {
   const image = byId("about-image");
   image.src = safeUrl(conference?.aboutImage, "images/backroundsvgs/about-placeholder.svg");
   image.alt = `${safeText(conference?.name)} audience placeholder image`;
+
+  const highlights = byId("about-highlights");
+  if (highlights) {
+    highlights.innerHTML = "";
+    asArray(conference?.highlights).forEach((item) => {
+      const highlight = document.createElement("article");
+      highlight.className = "about-highlight";
+      highlight.innerHTML = `
+        <strong>${safeText(item?.value)}</strong>
+        <span>${safeText(item?.label)}</span>
+      `;
+      highlights.append(highlight);
+    });
+  }
 };
 
 const renderThemes = () => {
@@ -326,9 +366,10 @@ const renderThemes = () => {
   container.innerHTML = "";
   const themes = asArray(siteConfig.themes);
 
-  (themes.length ? themes : [DEFAULT_PLACEHOLDER.theme, DEFAULT_PLACEHOLDER.theme, DEFAULT_PLACEHOLDER.theme]).forEach((theme) => {
+  (themes.length ? themes : [DEFAULT_PLACEHOLDER.theme, DEFAULT_PLACEHOLDER.theme, DEFAULT_PLACEHOLDER.theme]).forEach((theme, index) => {
     const card = document.createElement("article");
     card.className = "theme-card";
+    card.style.setProperty("--reveal-delay", `${index * 35}ms`);
     card.innerHTML = `
       <img src="${safeUrl(theme?.image, "images/backroundsvgs/theme-placeholder.svg")}" alt="${safeText(theme?.title)} theme image" loading="lazy" />
       <div class="theme-card-content">
@@ -348,9 +389,10 @@ const renderSpeakers = () => {
   container.innerHTML = "";
   const speakers = asArray(siteConfig.speakers);
 
-  (speakers.length ? speakers : [DEFAULT_PLACEHOLDER.speaker, DEFAULT_PLACEHOLDER.speaker, DEFAULT_PLACEHOLDER.speaker]).forEach((speaker) => {
+  (speakers.length ? speakers : [DEFAULT_PLACEHOLDER.speaker, DEFAULT_PLACEHOLDER.speaker, DEFAULT_PLACEHOLDER.speaker]).forEach((speaker, index) => {
     const card = document.createElement("article");
     card.className = "speaker-card";
+    card.style.setProperty("--reveal-delay", `${index * 35}ms`);
     card.innerHTML = `
       <img src="${safeUrl(speaker?.image, "images/backroundsvgs/speaker-placeholder.svg")}" alt="${safeText(speaker?.name)} headshot" loading="lazy" />
       <div class="speaker-copy">
@@ -372,9 +414,10 @@ const renderTeam = () => {
 
   const coChairs = asArray(committee.coChairs).slice(0, 2);
 
-  coChairs.forEach((member) => {
+  coChairs.forEach((member, index) => {
     const card = document.createElement("article");
     card.className = "cochair-person team-person";
+    card.style.setProperty("--reveal-delay", `${index * 40}ms`);
     card.innerHTML = `
       <img
         class="team-photo team-photo-cochair"
@@ -391,9 +434,10 @@ const renderTeam = () => {
 
   const directors = asArray(committee.directors).slice(0, 5);
 
-  directors.forEach((director) => {
+  directors.forEach((director, index) => {
     const card = document.createElement("article");
     card.className = "director-person team-person";
+    card.style.setProperty("--reveal-delay", `${index * 30}ms`);
 
     card.innerHTML = `
       <img
@@ -498,8 +542,10 @@ const renderSponsors = () => {
   };
 
   const logoItems = sponsors.length ? sponsors : fallbackSponsors;
-  logoItems.forEach((sponsor) => {
-    banner.append(createSponsorLogoNode(sponsor));
+  logoItems.forEach((sponsor, index) => {
+    const logo = createSponsorLogoNode(sponsor);
+    logo.style.setProperty("--reveal-delay", `${index * 18}ms`);
+    banner.append(logo);
   });
 
   setLink(byId("prospectus-link"), siteConfig.ctaLinks?.prospectusUrl);
@@ -557,24 +603,29 @@ const setupFaq = () => {
 
     item.innerHTML = `
       <button id="${questionId}" class="faq-question" type="button" aria-expanded="false" aria-controls="${panelId}">
-        ${safeText(entry?.question)}
+        <span>${safeText(entry?.question)}</span>
+        <span class="faq-icon" aria-hidden="true"></span>
       </button>
-      <p id="${panelId}" class="faq-answer" role="region" aria-labelledby="${questionId}" hidden>
-        ${safeText(entry?.answer)}
-      </p>
+      <div id="${panelId}" class="faq-panel" role="region" aria-labelledby="${questionId}" aria-hidden="true">
+        <p class="faq-answer">${safeText(entry?.answer)}</p>
+      </div>
     `;
 
     container.append(item);
   });
 
   const buttons = [...container.querySelectorAll(".faq-question")];
+  const setFaqState = (button, expanded) => {
+    const panel = byId(button.getAttribute("aria-controls"));
+    button.setAttribute("aria-expanded", String(expanded));
+    panel.setAttribute("aria-hidden", String(!expanded));
+    panel.style.maxHeight = expanded ? `${panel.scrollHeight}px` : "0px";
+  };
 
   buttons.forEach((button, index) => {
     button.addEventListener("click", () => {
       const expanded = button.getAttribute("aria-expanded") === "true";
-      button.setAttribute("aria-expanded", String(!expanded));
-      const panel = byId(button.getAttribute("aria-controls"));
-      panel.hidden = expanded;
+      setFaqState(button, !expanded);
     });
 
     button.addEventListener("keydown", (event) => {
@@ -593,6 +644,14 @@ const setupFaq = () => {
       if (event.key === "End") {
         event.preventDefault();
         buttons[buttons.length - 1].focus();
+      }
+    });
+  });
+
+  window.addEventListener("resize", () => {
+    buttons.forEach((button) => {
+      if (button.getAttribute("aria-expanded") === "true") {
+        setFaqState(button, true);
       }
     });
   });
@@ -622,18 +681,45 @@ const setupHeader = () => {
   const header = byId("top");
   const toggle = byId("menu-toggle");
   const nav = byId("site-nav");
+  const navLinks = [...nav.querySelectorAll('a[href^="#"]')];
+  const sections = navLinks
+    .map((link) => byId(link.getAttribute("href").slice(1)))
+    .filter(Boolean);
 
   const closeNav = () => {
     header.classList.remove("nav-open");
     toggle.setAttribute("aria-expanded", "false");
-    document.body.style.overflow = "";
+    document.body.classList.remove("nav-locked");
+  };
+
+  const updateHeaderState = () => {
+    header.classList.toggle("is-scrolled", window.scrollY > 18);
+  };
+
+  let scrollTicking = false;
+  const requestHeaderUpdate = () => {
+    if (scrollTicking) {
+      return;
+    }
+
+    scrollTicking = true;
+    window.requestAnimationFrame(() => {
+      updateHeaderState();
+      scrollTicking = false;
+    });
+  };
+
+  const setActiveLink = (id) => {
+    navLinks.forEach((link) => {
+      link.classList.toggle("is-active", link.getAttribute("href") === `#${id}`);
+    });
   };
 
   toggle.addEventListener("click", () => {
     const expanded = toggle.getAttribute("aria-expanded") === "true";
     toggle.setAttribute("aria-expanded", String(!expanded));
     header.classList.toggle("nav-open", !expanded);
-    document.body.style.overflow = expanded ? "" : "hidden";
+    document.body.classList.toggle("nav-locked", !expanded);
   });
 
   [...nav.querySelectorAll("a")].forEach((link) => {
@@ -658,12 +744,44 @@ const setupHeader = () => {
     }
   });
 
+  window.addEventListener("scroll", requestHeaderUpdate, { passive: true });
+  updateHeaderState();
+  setActiveLink(location.hash ? location.hash.slice(1) : "home");
+
+  if ("IntersectionObserver" in window && sections.length) {
+    const navObserver = new IntersectionObserver(
+      (entries) => {
+        const visibleEntry = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visibleEntry?.target?.id) {
+          setActiveLink(visibleEntry.target.id);
+        }
+      },
+      {
+        rootMargin: "-38% 0px -48% 0px",
+        threshold: [0.01, 0.2, 0.5]
+      }
+    );
+
+    sections.forEach((section) => navObserver.observe(section));
+  } else {
+    setActiveLink("home");
+  }
 };
 
 const setupRevealAnimation = () => {
   const observed = [...document.querySelectorAll(".observe")];
+  const hero = byId("home");
+  if (hero) {
+    hero.classList.add("is-visible");
+  }
+
+  const deferred = observed.filter((node) => node !== hero);
+
   if (!("IntersectionObserver" in window)) {
-    observed.forEach((node) => node.classList.add("is-visible"));
+    deferred.forEach((node) => node.classList.add("is-visible"));
     return;
   }
 
@@ -671,15 +789,20 @@ const setupRevealAnimation = () => {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
+          window.requestAnimationFrame(() => {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          });
         }
       });
     },
-    { threshold: 0.14 }
+    {
+      rootMargin: "0px 0px 32% 0px",
+      threshold: 0.01
+    }
   );
 
-  observed.forEach((node) => observer.observe(node));
+  deferred.forEach((node) => observer.observe(node));
 };
 
 const init = () => {
