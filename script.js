@@ -7,49 +7,45 @@ const siteConfig = {
       "Join students, researchers, executives, and policy leaders for a one-day conference focused on the global energy industry.",
     about:
       "Queen's Global Energy Conference (QGEC) connects emerging talent with decision-makers shaping global energy markets. The conference combines keynote perspectives, technical sessions, and practical networking designed for both learning and sponsorship visibility.",
-    heroImage: "hero-energy-outline.svg",
-    aboutImage: "western-electricity-grids.jpg"
+    heroImage: "images/backroundsvgs/hero-energy-outline.svg",
+    aboutImage: "images/western-electricity-grids.jpg"
   },
   ctaLinks: {
-    registerUrl: "https://example.com/register",
-    sponsorUrl: "mailto:sponsors.qgec@queensu.ca",
-    prospectusUrl: "https://example.com/prospectus"
+    registerUrl: "registration.html",
+    sponsorUrl: "mailto:qgec@engsoc.queensu.ca",
+    sponsorInfoUrl: "sponsorship-package.html",
+    prospectusUrl: "sponsorship-package.html"
   },
-  stats: [
-    { label: "Expected Attendees", value: "400+" },
-    { label: "Featured Speakers", value: "30" },
-    { label: "Partner Organizations", value: "20+" }
-  ],
   themes: [
     {
       title: "Energy Markets",
       description: "Trade flows, market volatility, and long-term demand outlooks.",
-      image: "theme-placeholder.svg"
+      image: "images/backroundsvgs/theme-placeholder.svg"
     },
     {
       title: "Policy and Regulation",
       description: "Frameworks accelerating resilient and affordable energy systems.",
-      image: "theme-placeholder.svg"
+      image: "images/backroundsvgs/theme-placeholder.svg"
     },
     {
       title: "Infrastructure and Grid",
       description: "Grid modernization, storage, and transmission priorities.",
-      image: "theme-placeholder.svg"
+      image: "images/backroundsvgs/theme-placeholder.svg"
     },
     {
       title: "Climate and Transition",
       description: "Decarbonization strategy and realistic implementation pathways.",
-      image: "theme-placeholder.svg"
+      image: "images/backroundsvgs/theme-placeholder.svg"
     },
     {
       title: "Technology and Innovation",
       description: "New technologies from advanced materials to clean fuels.",
-      image: "theme-placeholder.svg"
+      image: "images/backroundsvgs/theme-placeholder.svg"
     },
     {
       title: "Careers in Energy",
       description: "Mentorship, recruiting, and pathways into energy leadership.",
-      image: "theme-placeholder.svg"
+      image: "images/backroundsvgs/theme-placeholder.svg"
     }
   ],
   speakers: [
@@ -57,80 +53,60 @@ const siteConfig = {
       name: "Jeff Bezos",
       title: "CEO",
       organization: "Amazon",
-      image: "jeffbezos.jpg"
+      image: "images/jeffbezos.jpg"
     },
     {
       name: "Mark Diederichs",
       title: "Founder",
       organization: "Tunnels",
-      image: "mark.jpeg"
+      image: "images/mark.jpeg"
     },
     {
       name: "Elon Musk",
       title: "CEO",
       organization: "Boring Company",
-      image: "elonmusk.jpeg"
+      image: "images/elonmusk.jpeg"
     }
   ],
   organizingCommittee: {
     coChairs: [
       {
         name: "Alison Whike",
-        role: "Conference Co-Chair",
-        image: "speaker-placeholder.svg"
+        role: "Co-Chair",
+        image: "images/Team/Cochair/Aly-Headshot.jpg"
       },
       {
         name: "Matias Marjovsky",
-        role: "Conference Co-Chair",
-        image: "speaker-placeholder.svg"
+        role: "Co-Chair",
+        image: "images/Team/Cochair/Matias-Headshot.jpg"
       }
     ],
     directors: [
       {
         name: "Avery Phelan",
-        role: "Director of Programming",
-        image: "speaker-placeholder.svg",
-        coordinators: [
-          { name: "TBD Coordinator", role: "Programming Coordinator" },
-          { name: "TBD Coordinator", role: "Programming Coordinator" }
-        ]
+        role: "Director of x",
+        image: "images/Team/Directors/Avery-Headshot.jpg"
       },
       {
         name: "Gabriel Soler",
         role: "Director of Finance",
-        image: "speaker-placeholder.svg",
-        coordinators: [
-          { name: "TBD Coordinator", role: "Finance Coordinator" },
-          { name: "TBD Coordinator", role: "Finance Coordinator" }
-        ]
+        image: "images/Team/Directors/Gabe-Headshot.jpg"
       },
       {
         name: "Jamie Greenberg",
-        role: "Director of Logistics",
-        image: "speaker-placeholder.svg",
-        coordinators: [
-          { name: "TBD Coordinator", role: "Logistics Coordinator" },
-          { name: "TBD Coordinator", role: "Logistics Coordinator" }
-        ]
+        role: "Director of x",
+        image: "images/Team/Directors/Jamie-Headshot.jpg"
       },
       {
         name: "Markus Pennant",
-        role: "Director of Marketing",
-        image: "speaker-placeholder.svg",
-        coordinators: [
-          { name: "TBD Coordinator", role: "Marketing Coordinator" },
-          { name: "TBD Coordinator", role: "Marketing Coordinator" }
-        ]
+        role: "Director of x",
+        image: "images/Team/Directors/Markus-Headshot.jpg"
       },
       {
         name: "Sarah Becanin",
-        role: "Director of Partnerships",
-        image: "speaker-placeholder.svg",
-        coordinators: [
-          { name: "TBD Coordinator", role: "Partnership Coordinator" },
-          { name: "TBD Coordinator", role: "Partnership Coordinator" }
-        ]
-      }
+        role: "Director of x",
+        image: "images/backroundsvgs/speaker-placeholder.svg"
+      },
     ]
   },
   agenda: [
@@ -183,26 +159,29 @@ const siteConfig = {
       location: "Atrium"
     }
   ],
-  sponsors: {
-    title: [
-      { name: "Title Sponsor TBD", logo: "sponsor-placeholder.svg", url: "https://example.com" }
-    ],
-    gold: [
-      { name: "Gold Sponsor TBD", logo: "sponsor-placeholder.svg", url: "https://example.com" },
-      { name: "Gold Sponsor TBD", logo: "sponsor-placeholder.svg", url: "https://example.com" }
-    ],
-    community: [
-      { name: "Community Sponsor TBD", logo: "sponsor-placeholder.svg", url: "https://example.com" },
-      { name: "Community Sponsor TBD", logo: "sponsor-placeholder.svg", url: "https://example.com" },
-      { name: "Community Sponsor TBD", logo: "sponsor-placeholder.svg", url: "https://example.com" }
-    ]
-  },
+  pastSponsors: [
+    { name: "RBC Capital Markets", logo: "images/Sponsors/rbccm.png" },
+    { name: "Cannat", logo: "images/Sponsors/cannat.png" },
+    { name: "DDIC", logo: "images/Sponsors/DDIC.webp" },
+    { name: "GWLG", logo: "images/Sponsors/GWLG.png" },
+    { name: "OWA", logo: "images/Sponsors/OWA.png" },
+    { name: "TTA", logo: "images/Sponsors/TTA.png" },
+    { name: "YCR", logo: "images/Sponsors/YCR.webp" },
+    { name: "Bennett Jones", logo: "images/Sponsors/bennettjones.jpg" },
+    { name: "Bullfrog Power", logo: "images/Sponsors/bullfrog.svg" },
+    { name: "CEEA", logo: "images/Sponsors/ceea.svg" },
+    { name: "Hemisphere", logo: "images/Sponsors/hemisphere.png" },
+    { name: "McDaniel", logo: "images/Sponsors/mcdaniel.webp" },
+    { name: "Orennia", logo: "images/Sponsors/orennia.png" },
+    { name: "Smith", logo: "images/Sponsors/smith.png" },
+    { name: "WaterPower", logo: "images/Sponsors/waterpower.png" }
+  ],
   venue: {
     name: "Goodes Hall",
     address: "143 Union Street",
     mapEmbedUrl: "TBD",
     notes: "Travel details, accommodation blocks, and parking guidance will be published here.",
-    placeholderImage: "goodes-hall.jpg"
+    placeholderImage: "images/goodes-hall.jpg"
   },
   faq: [
     {
@@ -223,49 +202,47 @@ const siteConfig = {
     }
   ],
   contact: {
-    email: "qgec@queensu.ca",
+    email: "qgec@engsoc.queensu.ca",
     address: "45 Union St, Kingston, Ontario",
-    sponsorEmail: "sponsors.qgec@queensu.ca",
+    sponsorEmail: "qgec@engsoc.queensu.ca",
     social: [
       { label: "LinkedIn", url: "https://www.linkedin.com/company/qgec/" },
-      { label: "Instagram", url: "https://www.instagram.com/queens_qgec/" },
-      { label: "X", url: "https://x.com" }
+      { label: "Instagram", url: "https://www.instagram.com/queens_qgec/" }
     ]
   }
 };
 
 const FALLBACK = "TBD";
 const DEFAULT_PLACEHOLDER = {
-  stat: { label: "Metric", value: FALLBACK },
   theme: {
     title: "Theme Coming Soon",
     description: "Program details are being finalized.",
-    image: "theme-placeholder.svg"
+    image: "images/backroundsvgs/theme-placeholder.svg"
   },
   speaker: {
     name: "TBD Speaker",
     title: FALLBACK,
     organization: FALLBACK,
-    image: "speaker-placeholder.svg"
+    image: "images/backroundsvgs/speaker-placeholder.svg"
   },
   coChair: {
     name: "TBD Co-Chair",
     role: "Conference Co-Chair",
-    image: "speaker-placeholder.svg"
+    image: "images/backroundsvgs/speaker-placeholder.svg"
   },
   director: {
     name: "TBD Director",
     role: "Director",
-    image: "speaker-placeholder.svg",
+    image: "images/backroundsvgs/speaker-placeholder.svg",
     coordinators: [
       { name: "TBD Coordinator", role: "Coordinator" },
       { name: "TBD Coordinator", role: "Coordinator" }
     ]
   },
   sponsor: {
-    name: "TBD Sponsor",
-    logo: "sponsor-placeholder.svg",
-    url: "#"
+    name: "Past Sponsor",
+    logo: "images/backroundsvgs/sponsor-placeholder.svg",
+    url: ""
   },
   agenda: {
     time: "09:00",
@@ -317,10 +294,10 @@ const renderHero = () => {
   byId("hero-title").textContent = `${safeText(conference?.name)} ${safeText(conference?.year, "")}`.trim();
   byId("hero-tagline").textContent = safeText(conference?.tagline);
   byId("hero-description").textContent = safeText(conference?.description);
-  byId("hero-media").style.backgroundImage = `url('${safeUrl(conference?.heroImage, "hero-energy-outline.svg")}')`;
+  byId("hero-media").style.backgroundImage = `url('${safeUrl(conference?.heroImage, "images/backroundsvgs/hero-energy-outline.svg")}')`;
 
   const register = safeUrl(ctaLinks?.registerUrl);
-  const sponsor = safeUrl(ctaLinks?.sponsorUrl);
+  const sponsor = safeUrl(ctaLinks?.sponsorInfoUrl, safeUrl(ctaLinks?.sponsorUrl));
 
   ["hero-register-link", "header-register-link", "header-register-cta"].forEach((id) => {
     const link = byId(id);
@@ -332,33 +309,20 @@ const renderHero = () => {
   setLink(byId("hero-sponsor-link"), sponsor);
 };
 
-const renderSnapshot = () => {
-  const container = byId("stats-grid");
-  container.innerHTML = "";
-  const items = asArray(siteConfig.stats);
-
-  (items.length ? items : [DEFAULT_PLACEHOLDER.stat, DEFAULT_PLACEHOLDER.stat, DEFAULT_PLACEHOLDER.stat]).forEach((item) => {
-    const card = document.createElement("article");
-    card.className = "stat-card";
-    card.innerHTML = `
-      <p class="stat-value">${safeText(item?.value)}</p>
-      <p class="stat-label">${safeText(item?.label)}</p>
-    `;
-    container.append(card);
-  });
-};
-
 const renderAbout = () => {
   const { conference } = siteConfig;
   byId("about-description").textContent = safeText(conference?.about);
 
   const image = byId("about-image");
-  image.src = safeUrl(conference?.aboutImage, "about-placeholder.svg");
+  image.src = safeUrl(conference?.aboutImage, "images/backroundsvgs/about-placeholder.svg");
   image.alt = `${safeText(conference?.name)} audience placeholder image`;
 };
 
 const renderThemes = () => {
   const container = byId("themes-grid");
+  if (!container) {
+    return;
+  }
   container.innerHTML = "";
   const themes = asArray(siteConfig.themes);
 
@@ -366,7 +330,7 @@ const renderThemes = () => {
     const card = document.createElement("article");
     card.className = "theme-card";
     card.innerHTML = `
-      <img src="${safeUrl(theme?.image, "theme-placeholder.svg")}" alt="${safeText(theme?.title)} theme image" loading="lazy" />
+      <img src="${safeUrl(theme?.image, "images/backroundsvgs/theme-placeholder.svg")}" alt="${safeText(theme?.title)} theme image" loading="lazy" />
       <div class="theme-card-content">
         <h3>${safeText(theme?.title)}</h3>
         <p>${safeText(theme?.description)}</p>
@@ -378,6 +342,9 @@ const renderThemes = () => {
 
 const renderSpeakers = () => {
   const container = byId("speakers-grid");
+  if (!container) {
+    return;
+  }
   container.innerHTML = "";
   const speakers = asArray(siteConfig.speakers);
 
@@ -385,7 +352,7 @@ const renderSpeakers = () => {
     const card = document.createElement("article");
     card.className = "speaker-card";
     card.innerHTML = `
-      <img src="${safeUrl(speaker?.image, "speaker-placeholder.svg")}" alt="${safeText(speaker?.name)} headshot" loading="lazy" />
+      <img src="${safeUrl(speaker?.image, "images/backroundsvgs/speaker-placeholder.svg")}" alt="${safeText(speaker?.name)} headshot" loading="lazy" />
       <div class="speaker-copy">
         <h3 class="speaker-name">${safeText(speaker?.name)}</h3>
         <p class="speaker-meta">${safeText(speaker?.title)} | ${safeText(speaker?.organization)}</p>
@@ -393,18 +360,6 @@ const renderSpeakers = () => {
     `;
     container.append(card);
   });
-};
-
-const normalizedCoordinators = (coordinators) => {
-  const list = asArray(coordinators).slice(0, 3);
-  while (list.length < 2) {
-    list.push({
-      name: "TBD Coordinator",
-      role: "Coordinator",
-      image: "speaker-placeholder.svg"
-    });
-  }
-  return list;
 };
 
 const renderTeam = () => {
@@ -416,9 +371,6 @@ const renderTeam = () => {
   directorsContainer.innerHTML = "";
 
   const coChairs = asArray(committee.coChairs).slice(0, 2);
-  while (coChairs.length < 2) {
-    coChairs.push({ ...DEFAULT_PLACEHOLDER.coChair });
-  }
 
   coChairs.forEach((member) => {
     const card = document.createElement("article");
@@ -426,7 +378,7 @@ const renderTeam = () => {
     card.innerHTML = `
       <img
         class="team-photo team-photo-cochair"
-        src="${safeUrl(member?.image, "speaker-placeholder.svg")}"
+        src="${safeUrl(member?.image, "images/backroundsvgs/speaker-placeholder.svg")}"
         alt="${safeText(member?.name)} photo"
         loading="lazy"
       />
@@ -437,43 +389,20 @@ const renderTeam = () => {
   });
 
   const directors = asArray(committee.directors).slice(0, 5);
-  while (directors.length < 5) {
-    directors.push({ ...DEFAULT_PLACEHOLDER.director });
-  }
 
   directors.forEach((director) => {
     const card = document.createElement("article");
     card.className = "director-person team-person";
 
-    const coordinatorItems = normalizedCoordinators(director?.coordinators)
-      .map((coordinator) => {
-        return `
-          <article class="coordinator-person team-person">
-            <img
-              class="team-photo team-photo-coordinator"
-              src="${safeUrl(coordinator?.image, "speaker-placeholder.svg")}"
-              alt="${safeText(coordinator?.name)} photo"
-              loading="lazy"
-            />
-            <h4 class="team-name">${safeText(coordinator?.name)}</h4>
-            <p class="team-role">${safeText(coordinator?.role)}</p>
-          </article>
-        `;
-      })
-      .join("");
-
     card.innerHTML = `
       <img
         class="team-photo team-photo-director"
-        src="${safeUrl(director?.image, "speaker-placeholder.svg")}"
+        src="${safeUrl(director?.image, "images/backroundsvgs/speaker-placeholder.svg")}"
         alt="${safeText(director?.name)} photo"
         loading="lazy"
       />
       <h3 class="team-name">${safeText(director?.name)}</h3>
       <p class="team-role">${safeText(director?.role)}</p>
-      <div class="coordinator-row" aria-label="Coordinators under ${safeText(director?.name)}">
-        ${coordinatorItems}
-      </div>
     `;
 
     directorsContainer.append(card);
@@ -506,6 +435,9 @@ const parseTimeToMinutes = (timeLabel) => {
 
 const renderAgenda = () => {
   const agendaList = byId("agenda-list");
+  if (!agendaList) {
+    return;
+  }
   agendaList.innerHTML = "";
 
   const defaultAgenda = [
@@ -537,42 +469,51 @@ const renderAgenda = () => {
 };
 
 const renderSponsors = () => {
-  const sponsorSets = {
-    title: byId("sponsors-title"),
-    gold: byId("sponsors-gold"),
-    community: byId("sponsors-community")
-  };
-  const minimumByTier = {
-    title: 1,
-    gold: 2,
-    community: 3
-  };
+  const banner = byId("past-sponsors-banner");
+  banner.innerHTML = "";
 
-  Object.entries(sponsorSets).forEach(([tier, container]) => {
-    container.innerHTML = "";
-    container.classList.add(`tier-${tier}`);
-    const sponsors = asArray(siteConfig.sponsors?.[tier]).slice();
-    const minimum = minimumByTier[tier] || 1;
+  const sponsors = asArray(siteConfig.pastSponsors).slice();
+  const fallbackSponsors = Array.from({ length: 10 }, (_, index) => ({
+    ...DEFAULT_PLACEHOLDER.sponsor,
+    name: `Past Sponsor ${index + 1}`
+  }));
 
-    while (sponsors.length < minimum) {
-      sponsors.push({
-        ...DEFAULT_PLACEHOLDER.sponsor,
-        name: `${tier.charAt(0).toUpperCase()}${tier.slice(1)} Sponsor TBD`
-      });
+  const createSponsorLogoNode = (sponsor, allowLink = true) => {
+    const href = allowLink ? safeUrl(sponsor?.url, "") : "";
+    const logoSrc = safeUrl(sponsor?.logo, "images/backroundsvgs/sponsor-placeholder.svg");
+    const card = href ? document.createElement("a") : document.createElement("article");
+    card.className = "sponsor-banner-item";
+    card.setAttribute("aria-label", safeText(sponsor?.name));
+
+    if (href) {
+      setLink(card, href);
     }
 
-    (sponsors.length ? sponsors : [DEFAULT_PLACEHOLDER.sponsor]).forEach((sponsor) => {
-      const link = document.createElement("a");
-      link.className = "sponsor-logo-card";
-      link.classList.add(`sponsor-tier-${tier}`);
-      setLink(link, sponsor?.url);
-      link.setAttribute("aria-label", safeText(sponsor?.name));
-      link.innerHTML = `
-        <img src="${safeUrl(sponsor?.logo, "sponsor-placeholder.svg")}" alt="${safeText(sponsor?.name)} logo" loading="lazy" />
-      `;
-      container.append(link);
-    });
+    card.innerHTML = `
+      <img src="${logoSrc}" alt="${safeText(sponsor?.name)} logo" loading="lazy" />
+    `;
+    return card;
+  };
+
+  const logoItems = sponsors.length ? sponsors : fallbackSponsors;
+  const track = document.createElement("div");
+  track.className = "sponsor-marquee-track";
+
+  const primarySegment = document.createElement("div");
+  primarySegment.className = "sponsor-marquee-segment";
+  logoItems.forEach((sponsor) => {
+    primarySegment.append(createSponsorLogoNode(sponsor));
   });
+
+  const cloneSegment = document.createElement("div");
+  cloneSegment.className = "sponsor-marquee-segment sponsor-marquee-clone";
+  cloneSegment.setAttribute("aria-hidden", "true");
+  logoItems.forEach((sponsor) => {
+    cloneSegment.append(createSponsorLogoNode(sponsor, false));
+  });
+
+  track.append(primarySegment, cloneSegment);
+  banner.append(track);
 
   setLink(byId("prospectus-link"), siteConfig.ctaLinks?.prospectusUrl);
 
@@ -583,11 +524,19 @@ const renderSponsors = () => {
 
 const renderVenue = () => {
   const venue = siteConfig.venue || {};
-  byId("venue-name").textContent = safeText(venue.name);
-  byId("venue-address").textContent = safeText(venue.address);
-  byId("venue-notes").textContent = safeText(venue.notes);
-
+  const venueName = byId("venue-name");
+  const venueAddress = byId("venue-address");
+  const venueNotes = byId("venue-notes");
   const mapContainer = byId("venue-map");
+
+  if (!venueName || !venueAddress || !venueNotes || !mapContainer) {
+    return;
+  }
+
+  venueName.textContent = safeText(venue.name);
+  venueAddress.textContent = safeText(venue.address);
+  venueNotes.textContent = safeText(venue.notes);
+
   mapContainer.innerHTML = "";
 
   const mapUrl = safeUrl(venue.mapEmbedUrl, "TBD");
@@ -602,7 +551,7 @@ const renderVenue = () => {
   }
 
   const placeholder = document.createElement("img");
-  placeholder.src = safeUrl(venue.placeholderImage, "venue-map-placeholder.svg");
+  placeholder.src = safeUrl(venue.placeholderImage, "images/backroundsvgs/venue-map-placeholder.svg");
   placeholder.alt = "Venue map placeholder";
   placeholder.loading = "lazy";
   mapContainer.append(placeholder);
@@ -748,7 +697,6 @@ const setupRevealAnimation = () => {
 
 const init = () => {
   renderHero();
-  renderSnapshot();
   renderAbout();
   renderThemes();
   renderSpeakers();

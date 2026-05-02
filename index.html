@@ -8,12 +8,6 @@
       content="Queen's Global Energy Conference website with conference details, speakers, agenda, and registration information."
     />
     <title>Queen's Global Energy Conference</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -42,9 +36,9 @@
         <nav class="site-nav" id="site-nav" aria-label="Primary">
           <a href="#home">Home</a>
           <a href="#about">About</a>
-          <a href="#speakers">Speakers</a>
+          <!-- <a href="#speakers">Speakers</a> -->
           <a href="#team">Team</a>
-          <a href="#agenda">Agenda</a>
+          <!-- <a href="#agenda">Agenda</a> -->
           <a href="#sponsors">Sponsors</a>
           <a href="#faq">FAQ</a>
           <a href="#contact">Contact</a>
@@ -73,21 +67,13 @@
         </div>
       </section>
 
-      <section id="snapshot" class="section section-light observe">
-        <div class="container">
-          <p class="eyebrow">Conference Snapshot</p>
-          <h2 class="section-title">Key Numbers</h2>
-          <div id="stats-grid" class="stats-grid"></div>
-        </div>
-      </section>
-
       <section id="about" class="section section-dark observe">
         <div class="container about-layout">
           <div class="about-image-wrap">
             <img
               id="about-image"
               class="about-image"
-              src="about-placeholder.svg"
+              src="images/backroundsvgs/about-placeholder.svg"
               alt="Conference audience placeholder"
               loading="lazy"
             />
@@ -100,6 +86,8 @@
         </div>
       </section>
 
+
+<!---  Removed for now: 
       <section id="themes" class="section section-light observe">
         <div class="container">
           <p class="eyebrow">Conference Themes</p>
@@ -116,25 +104,14 @@
         </div>
       </section>
 
+    -->
+
       <section id="sponsors" class="section section-light-plain observe">
-        <div class="container sponsors-tree">
+        <div class="container sponsors-showcase">
           <p class="eyebrow">Sponsors</p>
           <h2 class="section-title">Partner Organizations</h2>
-
-          <div class="sponsor-tree-level sponsor-level-title">
-            <h3>Title Sponsors</h3>
-            <div id="sponsors-title" class="sponsor-grid sponsor-tree-grid"></div>
-          </div>
-
-          <div class="sponsor-tree-level sponsor-level-gold">
-            <h3>Gold Sponsors</h3>
-            <div id="sponsors-gold" class="sponsor-grid sponsor-tree-grid"></div>
-          </div>
-
-          <div class="sponsor-tree-level sponsor-level-community">
-            <h3>Community Sponsors</h3>
-            <div id="sponsors-community" class="sponsor-grid sponsor-tree-grid"></div>
-          </div>
+          <p class="sponsors-kicker">Past Sponsors</p>
+          <div id="past-sponsors-banner" class="sponsor-banner" aria-label="Past sponsor logos"></div>
 
           <aside class="sponsor-callout" aria-label="Sponsorship call to action">
             <h3>Sponsor the Next Generation of Energy Leaders</h3>
@@ -142,13 +119,14 @@
               Learn about partnership opportunities and visibility packages for Queen's Global Energy Conference.
             </p>
             <div class="sponsor-actions">
-              <a id="prospectus-link" class="button button-solid" href="#">Download Prospectus</a>
+              <a id="prospectus-link" class="button button-solid" href="#">Download Sponsorship Package</a>
               <a id="sponsor-link" class="button button-outline" href="#">Contact Sponsorship Team</a>
             </div>
           </aside>
         </div>
       </section>
 
+      <!---
       <section id="agenda" class="section section-light observe">
         <div class="container">
           <p class="eyebrow">Agenda</p>
@@ -169,6 +147,7 @@
         </div>
       </section>
 
+    -->
       <section id="team" class="section section-light-soft observe">
         <div class="container team-tree">
           <p class="eyebrow">Organizing Committee</p>
@@ -180,7 +159,7 @@
           </div>
 
           <div class="team-tree-level team-level-directors">
-            <h3 class="team-subtitle">Directors and Coordinators</h3>
+            <h3 class="team-subtitle">Directors</h3>
             <div id="directors-grid" class="directors-grid team-tree-grid"></div>
           </div>
         </div>

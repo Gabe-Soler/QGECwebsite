@@ -1,0 +1,25 @@
+<svg width="1280" height="820" viewBox="0 0 1280 820" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="820" fill="#243067"/>
+  <g opacity="0.26" stroke="#FFFFFF" stroke-width="2">
+    <path d="M80 120H1200"/>
+    <path d="M80 230H1200"/>
+    <path d="M80 340H1200"/>
+    <path d="M80 450H1200"/>
+    <path d="M80 560H1200"/>
+    <path d="M80 670H1200"/>
+    <path d="M170 70V750"/>
+    <path d="M320 70V750"/>
+    <path d="M470 70V750"/>
+    <path d="M620 70V750"/>
+    <path d="M770 70V750"/>
+    <path d="M920 70V750"/>
+    <path d="M1070 70V750"/>
+  </g>
+  <path d="M180 610C180 500 270 420 380 420C490 420 580 500 580 610C580 730 470 760 380 760C290 760 180 730 180 610Z" fill="#111D4A"/>
+  <path d="M380 670C425 670 462 633 462 588C462 543 425 506 380 506C335 506 298 543 298 588C298 633 335 670 380 670Z" fill="#FFFFFF" fill-opacity="0.22"/>
+  <rect x="680" y="200" width="430" height="300" rx="18" fill="#111D4A"/>
+  <rect x="730" y="250" width="330" height="18" rx="9" fill="#FFFFFF" fill-opacity="0.48"/>
+  <rect x="730" y="286" width="260" height="14" rx="7" fill="#FFFFFF" fill-opacity="0.33"/>
+  <rect x="730" y="322" width="290" height="14" rx="7" fill="#FFFFFF" fill-opacity="0.33"/>
+  <rect x="730" y="358" width="220" height="14" rx="7" fill="#FFFFFF" fill-opacity="0.33"/>
+</svg>

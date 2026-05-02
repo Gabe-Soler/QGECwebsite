@@ -1,4 +1,127 @@
+@font-face {
+  font-family: "Adobe Clean";
+  src: url("Font/AdobeClean/_ttf/AdobeClean-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Adobe Clean";
+  src: url("Font/AdobeClean/_ttf/AdobeClean-LightIt.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Adobe Clean";
+  src: url("Font/AdobeClean/_ttf/AdobeClean-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Adobe Clean";
+  src: url("Font/AdobeClean/_ttf/AdobeClean-It.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Adobe Clean";
+  src: url("Font/AdobeClean/AdobeClean-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Adobe Clean";
+  src: url("Font/AdobeClean/_ttf/AdobeClean-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Adobe Clean";
+  src: url("Font/AdobeClean/_ttf/AdobeClean-BoldIt.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Adobe Clean";
+  src: url("Font/AdobeClean/_ttf/AdobeClean-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Adobe Clean";
+  src: url("Font/AdobeClean/_ttf/AdobeClean-ExtraBoldIt.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Adobe Clean";
+  src: url("Font/AdobeClean/_ttf/AdobeClean-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Adobe Clean";
+  src: url("Font/AdobeClean/_ttf/AdobeClean-BlackIt.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Adobe Clean Condensed";
+  src: url("Font/AdobeClean/_ttf/AdobeClean-Cond.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Adobe Clean Condensed";
+  src: url("Font/AdobeClean/_ttf/AdobeClean-CondIt.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Adobe Clean Condensed";
+  src: url("Font/AdobeClean/_ttf/AdobeClean-BoldCond.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Adobe Clean Condensed";
+  src: url("Font/AdobeClean/_ttf/AdobeClean-BoldCondIt.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
+  --font-body: "Adobe Clean", "Segoe UI", sans-serif;
+  --font-display: "Adobe Clean", "Segoe UI", sans-serif;
+  --font-condensed: "Adobe Clean Condensed", "Adobe Clean", "Segoe UI", sans-serif;
   --navy-950: #111d4a;
   --navy-800: #364fa8;
   --navy-650: #6f87ee;
@@ -30,7 +153,8 @@ html {
 
 body {
   margin: 0;
-  font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+  font-family: var(--font-body);
+  font-weight: 400;
   color: var(--navy-950);
   background: var(--white);
   line-height: 1.55;
@@ -100,6 +224,7 @@ img {
 
 .header-inner {
   height: 100%;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -113,7 +238,7 @@ img {
 }
 
 .brand-mark {
-  font-family: "Cormorant Garamond", "Baskerville", "Times New Roman", serif;
+  font-family: var(--font-condensed);
   font-size: clamp(1.6rem, 2.5vw, 2.2rem);
   line-height: 0.9;
   font-weight: 700;
@@ -121,19 +246,27 @@ img {
 }
 
 .brand-subtitle {
+  font-family: var(--font-condensed);
   font-size: 0.75rem;
+  font-weight: 700;
   letter-spacing: 0.07em;
   text-transform: uppercase;
   opacity: 0.9;
 }
 
 .site-nav {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   gap: 0.9rem;
 }
 
 .site-nav a {
+  font-family: var(--font-condensed);
+  font-weight: 700;
   color: var(--white);
   opacity: 0.92;
   padding: 0.45rem 0.2rem;
@@ -149,13 +282,14 @@ img {
 }
 
 .button {
+  font-family: var(--font-body);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0.78rem 1.28rem;
   border-radius: 999px;
   font-size: 0.92rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.02em;
   border: 1px solid transparent;
   transition: transform var(--ease-out), background var(--ease-out), color var(--ease-out), border-color var(--ease-out);
@@ -282,36 +416,53 @@ img {
 }
 
 .eyebrow {
+  font-family: var(--font-condensed);
   margin: 0 0 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   opacity: 0.84;
 }
 
 h1,
 h2,
 h3 {
-  font-family: "Cormorant Garamond", "Baskerville", "Times New Roman", serif;
+  font-family: var(--font-display);
   margin: 0;
   line-height: 1.06;
 }
 
 h1 {
+  font-weight: 900;
   font-size: clamp(2.4rem, 6vw, 4.7rem);
   margin-bottom: 1rem;
   letter-spacing: 0.01em;
 }
 
+h2 {
+  font-weight: 800;
+}
+
+h3 {
+  font-weight: 700;
+}
+
+h4 {
+  font-family: var(--font-body);
+  font-weight: 700;
+}
+
 .hero-tagline {
   margin: 0;
+  font-weight: 500;
   font-size: clamp(1rem, 2.2vw, 1.4rem);
   max-width: 54ch;
 }
 
 .hero-description {
   margin: 1rem 0 0;
+  font-weight: 400;
   max-width: 62ch;
   opacity: 0.95;
 }
@@ -366,35 +517,6 @@ h1 {
 
 .section-dark .section-title {
   color: var(--white);
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2rem;
-}
-
-.stat-card {
-  border: 0;
-  border-radius: 0;
-  padding: 0;
-  background: none;
-  box-shadow: none;
-  text-align: center;
-}
-
-.stat-value {
-  margin: 0;
-  font-family: "Cormorant Garamond", "Baskerville", "Times New Roman", serif;
-  font-size: clamp(3rem, 8vw, 5rem);
-  font-weight: 700;
-  line-height: 1;
-}
-
-.stat-label {
-  margin: 0.45rem 0 0;
-  opacity: 0.86;
-  font-size: 0.96rem;
 }
 
 .about-layout {
@@ -478,8 +600,7 @@ h1 {
 .theme-card,
 .speaker-card,
 .agenda-item,
-.faq-item,
-.sponsor-logo-card {
+.faq-item {
   transition: transform var(--ease-out), box-shadow var(--ease-out);
 }
 
@@ -607,6 +728,7 @@ h1 {
 
 .team-name {
   margin: 0;
+  font-weight: 700;
   color: var(--navy-950);
   letter-spacing: 0.01em;
 }
@@ -737,6 +859,7 @@ h1 {
 }
 
 .agenda-time {
+  font-family: var(--font-condensed);
   font-weight: 700;
   letter-spacing: 0.03em;
 }
@@ -752,105 +875,93 @@ h1 {
   font-size: 0.92rem;
 }
 
-.sponsors-tree {
-  --sponsor-line-color: rgba(255, 255, 255, 0.22);
-}
-
-.sponsors-tree .eyebrow,
-.sponsors-tree .section-title {
+.sponsors-showcase .eyebrow,
+.sponsors-showcase .section-title {
   text-align: center;
 }
 
-.sponsor-tree-level {
-  position: relative;
-  display: grid;
-  justify-items: center;
-}
-
-.sponsor-tree-level + .sponsor-tree-level {
-  margin-top: 2.1rem;
-  padding-top: 0;
-}
-
-.sponsor-tree-level + .sponsor-tree-level::before {
-  display: none;
-}
-
-.sponsor-tree-level + .sponsor-tree-level::after {
-  display: none;
-}
-
-.sponsor-tree-level h3 {
-  margin: 0 0 0.9rem;
-  font-size: 1.38rem;
+.sponsors-kicker {
+  margin: 0 0 1rem;
   text-align: center;
+  font-family: var(--font-display);
+  font-size: clamp(1.04rem, 2vw, 1.32rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: rgba(var(--navy-rgb), 0.84);
 }
 
-.sponsor-grid {
+.sponsor-banner {
+  --logo-max-width: clamp(112px, 11vw, 172px);
+  --logo-max-height: clamp(40px, 4vw, 62px);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.1rem;
-  width: min(980px, 100%);
-  position: relative;
+  align-items: center;
+  gap: clamp(0.7rem, 1.3vw, 1.05rem);
+  width: 100%;
+  margin: 0 auto;
 }
 
-.sponsor-grid.tier-title {
-  width: min(250px, 100%);
+.sponsor-marquee-track,
+.sponsor-marquee-segment {
+  display: contents;
 }
 
-.sponsor-grid.tier-gold {
-  width: min(640px, 100%);
-}
-
-.sponsor-grid.tier-community {
-  width: min(980px, 100%);
-}
-
-.sponsor-logo-card {
-  width: 126px;
-  aspect-ratio: 1 / 1;
-  display: grid;
-  place-items: center;
-  border: 0;
-  border-radius: 50%;
-  padding: 0.88rem;
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: none;
-  box-shadow: var(--shadow-apple-circle);
-  position: relative;
-}
-
-.sponsor-tree-level:not(.sponsor-level-title) .sponsor-logo-card::before {
+.sponsor-marquee-clone {
   display: none;
 }
 
-.sponsor-logo-card:hover {
-  transform: translateY(-1px) scale(1.02);
-  box-shadow: var(--shadow-apple-circle-hover);
+.sponsor-banner-item {
+  flex: 0 1 auto;
+  display: grid;
+  place-items: center;
+  padding: 0.2rem 0.35rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
-.sponsor-logo-card img {
-  width: 76%;
-  max-width: 92px;
-  max-height: 64px;
+.sponsor-banner-item img {
+  width: auto;
+  height: auto;
+  max-width: var(--logo-max-width);
+  max-height: var(--logo-max-height);
   object-fit: contain;
 }
 
-.sponsor-tier-title {
-  width: 154px;
+.sponsor-banner:hover .sponsor-marquee-track,
+.sponsor-banner:focus-within .sponsor-marquee-track {
+  animation-play-state: paused;
 }
 
-.sponsor-tier-gold {
-  width: 132px;
+@keyframes sponsor-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
 }
 
-.sponsor-tier-community {
-  width: 118px;
-}
+@media (prefers-reduced-motion: reduce) {
+  .sponsor-banner {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
 
-#sponsors .sponsor-logo-card {
-  background: rgba(var(--navy-rgb), 0.06);
+  .sponsor-marquee-track,
+  .sponsor-marquee-segment {
+    display: contents;
+    width: auto;
+    animation: none !important;
+    will-change: auto;
+  }
+
+  .sponsor-marquee-clone {
+    display: none;
+  }
 }
 
 #sponsors .button-solid {
@@ -967,7 +1078,7 @@ h1 {
   background: transparent;
   color: var(--white);
   font: inherit;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.01em;
   padding: 1rem 0;
   cursor: pointer;
@@ -1021,6 +1132,8 @@ h1 {
 }
 
 .social-links a {
+  font-family: var(--font-condensed);
+  font-weight: 700;
   border: 1px solid rgba(255, 255, 255, 0.46);
   border-radius: 999px;
   padding: 0.42rem 0.85rem;
@@ -1040,6 +1153,53 @@ h1 {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 0.9rem;
   opacity: 0.82;
+}
+
+.info-page .site-header {
+  position: fixed;
+  background: rgba(var(--navy-rgb), 0.94);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px) saturate(115%);
+}
+
+.info-page main {
+  padding-top: var(--header-height);
+}
+
+.info-hero {
+  min-height: calc(100vh - var(--header-height));
+  display: grid;
+  align-items: center;
+}
+
+.info-panel {
+  margin-top: 0.7rem;
+  max-width: min(760px, 100%);
+  border: 1px solid rgba(var(--navy-rgb), 0.14);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: var(--shadow-apple-square);
+  padding: clamp(1.5rem, 4vw, 2.6rem);
+}
+
+.info-title {
+  margin: 0;
+  font-size: clamp(2rem, 5.3vw, 3.6rem);
+  line-height: 1.05;
+}
+
+.info-copy {
+  margin: 0.9rem 0 0;
+  max-width: 62ch;
+  font-size: clamp(0.98rem, 2.2vw, 1.1rem);
+  color: rgba(var(--navy-rgb), 0.9);
+}
+
+.info-actions {
+  margin-top: 1.35rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 .observe {
@@ -1062,12 +1222,17 @@ h1 {
     font-size: 0.86rem;
   }
 
-  .sponsor-grid.tier-community {
-    width: min(760px, 100%);
+  .sponsor-banner {
+    --logo-max-width: clamp(108px, 13vw, 164px);
+    --logo-max-height: clamp(38px, 3.8vw, 58px);
   }
 }
 
 @media (max-width: 1024px) {
+  .header-inner {
+    position: static;
+  }
+
   section[id] {
     scroll-margin-top: calc(var(--header-height) + 14px);
   }
@@ -1153,11 +1318,13 @@ h1 {
   }
 
   .team-tree-level + .team-tree-level::before,
-  .team-tree-level + .team-tree-level::after,
-  .sponsor-tree-level + .sponsor-tree-level::before,
-  .sponsor-tree-level + .sponsor-tree-level::after,
-  .sponsor-tree-level:not(.sponsor-level-title) .sponsor-logo-card::before {
+  .team-tree-level + .team-tree-level::after {
     display: none;
+  }
+
+  .sponsor-banner {
+    --logo-max-width: clamp(104px, 15vw, 154px);
+    --logo-max-height: clamp(36px, 4.6vw, 54px);
   }
 
   .cochairs-grid {
@@ -1169,17 +1336,29 @@ h1 {
   }
 
   .directors-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    width: min(860px, 100%);
-    gap: 1.4rem 1rem;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    width: 100%;
+    gap: 0.9rem 0.55rem;
   }
 
   .director-person {
-    max-width: 190px;
+    max-width: none;
+    width: 100%;
   }
 
   .team-photo-director {
-    width: 102px;
+    width: min(100%, 86px);
+  }
+
+  .director-person .team-name {
+    font-size: clamp(0.72rem, 1.6vw, 0.92rem);
+    line-height: 1.15;
+  }
+
+  .director-person .team-role {
+    font-size: clamp(0.62rem, 1.35vw, 0.78rem);
+    line-height: 1.2;
+    margin-bottom: 0;
   }
 }
 
@@ -1203,20 +1382,6 @@ h1 {
   .hero-content {
     padding-top: 6rem;
     padding-bottom: 4rem;
-  }
-
-  .stats-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.75rem;
-  }
-
-  .stat-value {
-    font-size: clamp(2rem, 7vw, 2.8rem);
-  }
-
-  .stat-label {
-    font-size: 0.78rem;
-    line-height: 1.25;
   }
 
   .themes-grid {
@@ -1267,10 +1432,7 @@ h1 {
   }
 
   .team-tree-level + .team-tree-level::before,
-  .team-tree-level + .team-tree-level::after,
-  .sponsor-tree-level + .sponsor-tree-level::before,
-  .sponsor-tree-level + .sponsor-tree-level::after,
-  .sponsor-tree-level:not(.sponsor-level-title) .sponsor-logo-card::before {
+  .team-tree-level + .team-tree-level::after {
     display: none;
   }
 
@@ -1285,35 +1447,64 @@ h1 {
     width: 118px;
   }
 
-  .sponsor-grid {
-    width: 100%;
-    gap: 0.9rem;
+  .sponsor-banner {
+    --logo-max-width: clamp(98px, 26vw, 140px);
+    --logo-max-height: clamp(34px, 10vw, 50px);
+    display: block;
+    overflow: hidden;
+    padding: 0.2rem 0 0.55rem;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
   }
 
-  .sponsor-tier-title {
-    width: 138px;
+  .sponsor-marquee-track {
+    display: flex;
+    width: max-content;
+    align-items: center;
+    animation: sponsor-marquee 34s linear infinite;
+    will-change: transform;
   }
 
-  .sponsor-tier-gold {
-    width: 124px;
+  .sponsor-marquee-segment {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.95rem, 3vw, 1.25rem);
   }
 
-  .sponsor-tier-community {
-    width: 108px;
+  .sponsor-marquee-clone {
+    display: flex;
+  }
+
+  .sponsor-banner-item {
+    flex: 0 0 auto;
+    padding-inline: 0.08rem;
   }
 
   .directors-grid {
-    width: min(560px, 100%);
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.2rem 0.85rem;
+    width: 100%;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0.55rem 0.38rem;
   }
 
   .director-person {
-    max-width: 180px;
+    max-width: none;
+    width: 100%;
   }
 
   .team-photo-director {
-    width: 92px;
+    width: min(100%, clamp(44px, 11vw, 66px));
+    margin-bottom: 0.45rem;
+  }
+
+  .director-person .team-name {
+    font-size: clamp(0.58rem, 2.15vw, 0.82rem);
+    line-height: 1.12;
+  }
+
+  .director-person .team-role {
+    font-size: clamp(0.5rem, 1.7vw, 0.66rem);
+    line-height: 1.15;
+    margin-top: 0.14rem;
   }
 
   .coordinator-row {
@@ -1391,24 +1582,30 @@ h1 {
   }
 
   .directors-grid {
-    grid-template-columns: 1fr;
-    width: min(240px, 100%);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    width: 100%;
+    gap: 0.4rem 0.25rem;
   }
 
   .team-photo-director {
-    width: 84px;
+    width: min(100%, clamp(38px, 11vw, 56px));
+    margin-bottom: 0.35rem;
   }
 
-  .sponsor-tier-title {
-    width: 126px;
+  .director-person .team-name {
+    font-size: clamp(0.53rem, 2.45vw, 0.72rem);
+    line-height: 1.1;
   }
 
-  .sponsor-tier-gold {
-    width: 112px;
+  .director-person .team-role {
+    font-size: clamp(0.46rem, 2vw, 0.6rem);
+    line-height: 1.1;
+    margin-top: 0.1rem;
   }
 
-  .sponsor-tier-community {
-    width: 96px;
+  .sponsor-banner {
+    --logo-max-width: clamp(88px, 29vw, 124px);
+    --logo-max-height: clamp(30px, 11vw, 44px);
   }
 
   .hero-actions {
@@ -1427,5 +1624,23 @@ h1 {
 
   .section-title {
     font-size: clamp(1.7rem, 8vw, 2.3rem);
+  }
+
+  .directors-grid {
+    gap: 0.3rem 0.2rem;
+  }
+
+  .team-photo-director {
+    width: min(100%, 48px);
+  }
+
+  .director-person .team-name {
+    font-size: 0.5rem;
+    line-height: 1.05;
+  }
+
+  .director-person .team-role {
+    font-size: 0.43rem;
+    line-height: 1.05;
   }
 }
