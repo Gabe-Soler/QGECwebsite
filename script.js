@@ -9,13 +9,9 @@ const siteConfig = {
       "Join students, researchers, executives, and policy leaders for a one-day conference focused on the global energy industry.",
     about:
       "Queen's Global Energy Conference (QGEC) connects emerging talent with decision-makers shaping global energy markets. The conference combines keynote perspectives, technical sessions, and practical networking designed for both learning and sponsorship visibility.",
-    heroImage: "images/backroundsvgs/hero-energy-outline.svg",
+    heroImage: "images/hero-image.png",
     aboutImage: "images/western-electricity-grids.jpg",
-    details: [
-      { label: "Year", value: "2026" },
-      { label: "Format", value: "One-day conference" },
-      { label: "Location", value: "Kingston, Ontario" }
-    ],
+    titleLines: ["Queen's", "Global Energy", "Conference 2026"],
     highlights: [
       { value: "Student-led", label: "Queen's engineering conference" },
       { value: "Global energy", label: "Markets, policy, and innovation" },
@@ -96,7 +92,7 @@ const siteConfig = {
     directors: [
       {
         name: "Avery Phelan",
-        role: "Logistics",
+        role: "Sponsorships",
         image: "images/Team/Directors/Avery-Headshot-opt.jpg"
       },
       {
@@ -111,7 +107,7 @@ const siteConfig = {
       },
       {
         name: "Markus Pennant",
-        role: "Sponsorship",
+        role: "Logistics",
         image: "images/Team/Directors/Markus-Headshot-opt.jpg"
       },
       {
@@ -303,24 +299,23 @@ const setLink = (element, url, fallback = "#") => {
 
 const renderHero = () => {
   const { conference, ctaLinks } = siteConfig;
-  byId("hero-title").textContent = `${safeText(conference?.name)} ${safeText(conference?.year, "")}`.trim();
+  const title = byId("hero-title");
+  title.innerHTML = "";
+
+  const titleLines = asArray(conference?.titleLines).length
+    ? asArray(conference.titleLines)
+    : ["Queen's", "Global Energy", `Conference ${safeText(conference?.year, "")}`.trim()];
+
+  titleLines.slice(0, 3).forEach((line, index) => {
+    const span = document.createElement("span");
+    span.className = `hero-title-line hero-title-line-${index + 1}`;
+    span.textContent = safeText(line, "");
+    title.append(span);
+  });
+
   byId("hero-tagline").textContent = safeText(conference?.tagline);
   byId("hero-description").textContent = safeText(conference?.description);
-  byId("hero-media").style.backgroundImage = `url('${safeUrl(conference?.heroImage, "images/backroundsvgs/hero-energy-outline.svg")}')`;
-
-  const meta = byId("hero-meta");
-  if (meta) {
-    meta.innerHTML = "";
-    asArray(conference?.details).forEach((item) => {
-      const detail = document.createElement("span");
-      detail.className = "hero-meta-item";
-      detail.innerHTML = `
-        <span class="hero-meta-label">${safeText(item?.label, "")}</span>
-        <span class="hero-meta-value">${safeText(item?.value)}</span>
-      `;
-      meta.append(detail);
-    });
-  }
+  byId("hero-media").style.backgroundImage = `url('${safeUrl(conference?.heroImage, "images/hero-image.png")}')`;
 
   const register = safeUrl(ctaLinks?.registerUrl);
   const sponsor = safeUrl(ctaLinks?.sponsorInfoUrl, safeUrl(ctaLinks?.sponsorUrl));
@@ -692,23 +687,6 @@ const setupHeader = () => {
     document.body.classList.remove("nav-locked");
   };
 
-  const updateHeaderState = () => {
-    header.classList.toggle("is-scrolled", window.scrollY > 18);
-  };
-
-  let scrollTicking = false;
-  const requestHeaderUpdate = () => {
-    if (scrollTicking) {
-      return;
-    }
-
-    scrollTicking = true;
-    window.requestAnimationFrame(() => {
-      updateHeaderState();
-      scrollTicking = false;
-    });
-  };
-
   const setActiveLink = (id) => {
     navLinks.forEach((link) => {
       link.classList.toggle("is-active", link.getAttribute("href") === `#${id}`);
@@ -744,8 +722,6 @@ const setupHeader = () => {
     }
   });
 
-  window.addEventListener("scroll", requestHeaderUpdate, { passive: true });
-  updateHeaderState();
   setActiveLink(location.hash ? location.hash.slice(1) : "home");
 
   if ("IntersectionObserver" in window && sections.length) {
