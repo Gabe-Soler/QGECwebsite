@@ -498,8 +498,8 @@ img {
 .hero-overlay {
   z-index: -2;
   background:
-    linear-gradient(90deg, rgba(var(--navy-rgb), 0.54) 0%, rgba(var(--navy-rgb), 0.32) 44%, rgba(var(--navy-rgb), 0.14) 100%),
-    linear-gradient(180deg, rgba(var(--navy-rgb), 0.04), rgba(var(--navy-rgb), 0.28));
+    linear-gradient(90deg, rgba(var(--navy-rgb), 0.46) 0%, rgba(var(--navy-rgb), 0.25) 44%, rgba(var(--navy-rgb), 0.08) 100%),
+    linear-gradient(180deg, rgba(var(--navy-rgb), 0.02), rgba(var(--navy-rgb), 0.22));
 }
 
 .hero::before {
@@ -509,7 +509,7 @@ img {
   z-index: -1;
   background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
   background-size: 72px 72px;
-  opacity: 0.14;
+  opacity: 0.1;
   pointer-events: none;
 }
 
@@ -521,7 +521,7 @@ img {
   bottom: 0;
   z-index: -1;
   height: 22vh;
-  background: linear-gradient(180deg, transparent, rgba(var(--navy-rgb), 0.2));
+  background: linear-gradient(180deg, transparent, rgba(var(--navy-rgb), 0.14));
   pointer-events: none;
 }
 
@@ -1602,7 +1602,7 @@ h4 {
 
   .hero-media {
     background-size: cover;
-    background-position: 72% center;
+    background-position: 58% center;
     opacity: 1;
   }
 
@@ -1714,7 +1714,7 @@ h4 {
 
   .hero-media {
     background-size: cover;
-    background-position: right center;
+    background-position: 70% center;
     opacity: 1;
   }
 
@@ -1846,14 +1846,14 @@ h4 {
 
   .hero-media {
     background-size: cover;
-    background-position: right center;
+    background-position: 74% center;
     opacity: 1;
   }
 
   .hero-overlay {
     background:
-      linear-gradient(90deg, rgba(var(--navy-rgb), 0.7), rgba(var(--navy-rgb), 0.38)),
-      linear-gradient(180deg, rgba(var(--navy-rgb), 0.02), rgba(var(--navy-rgb), 0.42));
+      linear-gradient(90deg, rgba(var(--navy-rgb), 0.52), rgba(var(--navy-rgb), 0.2)),
+      linear-gradient(180deg, rgba(var(--navy-rgb), 0), rgba(var(--navy-rgb), 0.26));
   }
 
   .hero-content {

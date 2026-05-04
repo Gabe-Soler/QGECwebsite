@@ -111,9 +111,9 @@ const siteConfig = {
         image: "images/Team/Directors/Markus-Headshot-opt.jpg"
       },
       {
-        name: "Sarah Becanin",
-        role: "Director",
-        image: "images/backroundsvgs/speaker-placeholder.svg"
+        name: "Sarah Bacanin",
+        role: "Events",
+        image: "images/Team/Directors/sarah.png"
       }
     ]
   },
