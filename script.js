@@ -86,7 +86,7 @@ const siteConfig = {
       {
         name: "Matias Marjovsky",
         role: "Co-Chair",
-        image: "images/Team/Cochair/Matias-Headshot-opt.jpg"
+        image: "images/Team/Cochair/Matias.png"
       }
     ],
     directors: [

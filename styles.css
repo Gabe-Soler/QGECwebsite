@@ -134,7 +134,7 @@
   --surface-strong: #edf2ff;
   --line: rgba(var(--navy-rgb), 0.14);
   --container: min(1160px, calc(100% - 48px));
-  --header-height: 76px;
+  --header-height: 108px;
   --radius-sm: 6px;
   --radius-md: 8px;
   --radius-lg: 8px;
@@ -245,21 +245,13 @@ img {
   min-width: max-content;
 }
 
-.brand-mark {
-  font-family: var(--font-condensed);
-  font-size: 2rem;
-  line-height: 0.9;
-  font-weight: 700;
-  letter-spacing: 0;
-}
-
-.brand-subtitle {
-  font-family: var(--font-condensed);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0;
-  text-transform: uppercase;
-  opacity: 0.88;
+.brand-logo {
+  display: block;
+  height: 96px;
+  width: auto;
+  max-width: 360px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .site-nav {
@@ -1536,7 +1528,7 @@ h4 {
 
 @media (max-width: 1024px) {
   :root {
-    --header-height: 72px;
+    --header-height: 96px;
   }
 
   .header-inner {
@@ -1674,12 +1666,8 @@ h4 {
     --container: min(calc(100% - 32px), 680px);
   }
 
-  .brand-mark {
-    font-size: 1.75rem;
-  }
-
-  .brand-subtitle {
-    display: none;
+  .brand-logo {
+    height: 80px;
   }
 
   .section {
