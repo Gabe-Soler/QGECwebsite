@@ -9,7 +9,7 @@ const siteConfig = {
       "Join students, researchers, executives, and policy leaders for a one-day conference focused on the global energy industry.",
     about:
       "Queen's Global Energy Conference (QGEC) connects emerging talent with decision-makers shaping global energy markets. The conference combines keynote perspectives, technical sessions, and practical networking designed for both learning and sponsorship visibility.",
-    heroImage: "images/hero-image.png",
+    heroImage: "images/hero-image-opt.jpg",
     aboutImage: "images/western-electricity-grids.jpg",
     titleLines: ["Queen's", "Global Energy", "Conference 2026"],
     highlights: [
@@ -86,7 +86,7 @@ const siteConfig = {
       {
         name: "Matias Marjovsky",
         role: "Co-Chair",
-        image: "images/Team/Cochair/matias.png"
+        image: "images/Team/Cochair/matias-opt.jpg"
       }
     ],
     directors: [
@@ -109,11 +109,6 @@ const siteConfig = {
         name: "Markus Pennant",
         role: "Logistics",
         image: "images/Team/Directors/Markus-Headshot-opt.jpg"
-      },
-      {
-        name: "Sarah Bacanin",
-        role: "Events",
-        image: "images/Team/Directors/sarah.png"
       }
     ]
   },
@@ -315,7 +310,7 @@ const renderHero = () => {
 
   byId("hero-tagline").textContent = safeText(conference?.tagline);
   byId("hero-description").textContent = safeText(conference?.description);
-  byId("hero-media").style.backgroundImage = `url('${safeUrl(conference?.heroImage, "images/hero-image.png")}')`;
+  byId("hero-media").style.backgroundImage = `url('${safeUrl(conference?.heroImage, "images/hero-image-opt.jpg")}')`;
 
   const register = safeUrl(ctaLinks?.registerUrl);
   const sponsor = safeUrl(ctaLinks?.sponsorInfoUrl, safeUrl(ctaLinks?.sponsorUrl));
