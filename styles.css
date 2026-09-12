@@ -596,6 +596,16 @@ h4 {
   font-weight: 700;
 }
 
+.hero-date {
+  margin: 0 0 0.9rem;
+  color: rgba(255, 255, 255, 0.92);
+  font-family: var(--font-condensed);
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .hero-tagline {
   max-width: 38rem;
   margin: 0;
@@ -930,10 +940,19 @@ h4 {
 }
 
 .directors-grid {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 1rem;
+  --directors-gap: 1rem;
+  --directors-per-row: 5;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--directors-gap);
   width: min(1120px, 100%);
+}
+
+/* Cards keep their five-across size, so any count stays centered in the row. */
+.directors-grid > * {
+  flex: 0 1
+    calc((100% - (var(--directors-per-row) - 1) * var(--directors-gap)) / var(--directors-per-row));
 }
 
 .team-person {
@@ -1631,8 +1650,7 @@ h4 {
   }
 
   .directors-grid {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 0.65rem;
+    --directors-gap: 0.65rem;
   }
 
   .team-photo-director {
@@ -1760,8 +1778,7 @@ h4 {
   }
 
   .directors-grid {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 0.34rem;
+    --directors-gap: 0.34rem;
     width: 100%;
   }
 
@@ -1862,6 +1879,11 @@ h4 {
     font-size: 1.88rem;
   }
 
+  .hero-date {
+    margin-bottom: 0.7rem;
+    font-size: 0.92rem;
+  }
+
   .hero-tagline {
     font-size: 1.12rem;
   }
@@ -1902,9 +1924,8 @@ h4 {
   }
 
   .directors-grid {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    --directors-gap: 0.18rem;
     width: 100%;
-    gap: 0.18rem;
   }
 
   .cochair-person {
@@ -1969,6 +1990,10 @@ h4 {
 @media (max-width: 420px) {
   #hero-title {
     font-size: 2.46rem;
+  }
+
+  .hero-date {
+    font-size: 0.86rem;
   }
 
   .hero-tagline {

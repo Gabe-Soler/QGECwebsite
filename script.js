@@ -3,7 +3,8 @@ document.documentElement.classList.add("js");
 const siteConfig = {
   conference: {
     name: "Queen's Global Energy Conference",
-    year: "2026",
+    year: "2027",
+    date: "January 30, 2027",
     tagline: "Canada's premier university energy conference",
     description:
       "Join students, researchers, executives, and policy leaders for a one-day conference focused on the global energy industry.",
@@ -11,7 +12,7 @@ const siteConfig = {
       "Queen's Global Energy Conference (QGEC) connects emerging talent with decision-makers shaping global energy markets. The conference combines keynote perspectives, technical sessions, and practical networking designed for both learning and sponsorship visibility.",
     heroImage: "images/hero-image-opt.jpg",
     aboutImage: "images/western-electricity-grids.jpg",
-    titleLines: ["Queen's", "Global Energy", "Conference 2026"],
+    titleLines: ["Queen's", "Global Energy", "Conference 2027"],
     highlights: [
       { value: "Student-led", label: "Queen's engineering conference" },
       { value: "Global energy", label: "Markets, policy, and innovation" },
@@ -22,7 +23,8 @@ const siteConfig = {
     registerUrl: "registration.html",
     sponsorUrl: "mailto:qgec@engsoc.queensu.ca",
     sponsorInfoUrl: "sponsorship-package.html",
-    prospectusUrl: "sponsorship-package.html"
+    prospectusUrl: "QGEC-Sponsorship-Package.pdf",
+    prospectusFileName: "QGEC-Sponsorship-Package.pdf"
   },
   themes: [
     {
@@ -308,6 +310,13 @@ const renderHero = () => {
     title.append(span);
   });
 
+  const heroDate = byId("hero-date");
+  if (heroDate) {
+    const dateText = safeText(conference?.date, "");
+    heroDate.textContent = dateText;
+    heroDate.hidden = !dateText;
+  }
+
   byId("hero-tagline").textContent = safeText(conference?.tagline);
   byId("hero-description").textContent = safeText(conference?.description);
   byId("hero-media").style.backgroundImage = `url('${safeUrl(conference?.heroImage, "images/hero-image-opt.jpg")}')`;
@@ -538,7 +547,16 @@ const renderSponsors = () => {
     banner.append(logo);
   });
 
-  setLink(byId("prospectus-link"), siteConfig.ctaLinks?.prospectusUrl);
+  const prospectusLink = byId("prospectus-link");
+  if (prospectusLink) {
+    setLink(prospectusLink, siteConfig.ctaLinks?.prospectusUrl);
+    const prospectusFile = safeText(siteConfig.ctaLinks?.prospectusFileName, "");
+    if (prospectusFile) {
+      prospectusLink.setAttribute("download", prospectusFile);
+    } else {
+      prospectusLink.removeAttribute("download");
+    }
+  }
 
   const sponsorEmail = safeText(siteConfig.contact?.sponsorEmail, "");
   const sponsorFallback = sponsorEmail ? `mailto:${sponsorEmail}` : "#";
