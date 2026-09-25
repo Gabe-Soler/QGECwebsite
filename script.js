@@ -23,8 +23,8 @@ const siteConfig = {
     registerUrl: "registration.html",
     sponsorUrl: "mailto:qgec@engsoc.queensu.ca",
     sponsorInfoUrl: "sponsorship-package.html",
-    prospectusUrl: "QGEC-Sponsorship-Package.pdf",
-    prospectusFileName: "QGEC-Sponsorship-Package.pdf"
+    prospectusUrl: "mailto:qgec@engsoc.queensu.ca?subject=Sponsorship%20Package%20Request",
+    prospectusFileName: ""
   },
   themes: [
     {
